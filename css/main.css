@@ -670,17 +670,28 @@ footer {
     min-width: 100vw;
     height: 244px;
     display: block;
-    background: red;
+    padding: 16px 24px;
     float: left; }
     .carousel .carousel-scroll .item .box1 {
-      background: blue;
-      height: 100%; }
+      /* Rectangle 15: */
+      background-image: linear-gradient(-168deg, #4A90E2 0%, #7BB8FF 100%);
+      box-shadow: 0 -16px 24px -20px rgba(0, 0, 0, 0.25), 0 10px 20px -10px rgba(74, 74, 74, 0.74);
+      border-radius: 12px;
+      box-shadow: 0 -16px 24px -20px rgba(0, 0, 0, 0.25), 0px 10px 20px -10px rgba(0, 0, 0, 0.5);
+      height: 100%;
+      border-radius: 12px; }
     .carousel .carousel-scroll .item .box2 {
-      background: green;
+      /* Rectangle 15: */
+      background-image: linear-gradient(-180deg, #FAD961 0%, #F76B1C 100%);
+      box-shadow: 0 -16px 24px -20px rgba(0, 0, 0, 0.25), 0px 10px 20px -10px rgba(0, 0, 0, 0.5);
+      border-radius: 12px;
       height: 100%; }
     .carousel .carousel-scroll .item .box3 {
-      background: purple;
-      height: 100%; }
+      height: 100%;
+      border-radius: 12px;
+      box-shadow: 0 -16px 24px -20px rgba(0, 0, 0, 0.25), 0px 10px 20px -10px rgba(0, 0, 0, 0.5);
+      /* Rectangle 15: */
+      background-image: linear-gradient(-179deg, #3023AE 0%, #C86DD7 100%); }
 
 #mast {
   position: relative;
@@ -751,9 +762,9 @@ body .container {
   right: 0;
   bottom: 88px;
   background: transparent;
-  width: 10px; }
+  width: 6px; }
 
 .iScrollIndicator {
   background: rgba(0, 0, 0, 0.25);
-  width: 8px;
+  width: 4px;
   border-radius: 30px; }
