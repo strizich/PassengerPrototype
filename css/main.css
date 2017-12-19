@@ -495,7 +495,8 @@ input {
       width: 100%;
       border: none;
       font-size: 17px;
-      text-align: right; }
+      text-align: right;
+      padding: 0 8px 0 0; }
       .cell .form-control--cell input:focus {
         outline: none; }
     .cell .form-control--cell input:focus + .form-control--cell:after {
@@ -503,7 +504,7 @@ input {
   .cell:after {
     display: block;
     position: absolute;
-    border-bottom: 0.5px solid rgba(0, 0, 0, 0.25);
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
     content: '';
     width: auto;
     bottom: 0;
@@ -655,6 +656,33 @@ footer {
     footer nav .menu.active .tab-icon {
       background: url(../images/nav/tab-5-active.svg) no-repeat center; }
 
+#mast {
+  position: relative;
+  height: 244px; }
+
+#mast-wrapper {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  background: #EFEFF4;
+  overflow: hidden;
+  z-index: 0;
+  height: 244px;
+  overflow: hidden;
+  margin: 0 -16px;
+  width: 732px; }
+  #mast-wrapper .item {
+    width: 244px;
+    height: 244px;
+    float: left;
+    background: red;
+    display: flex; }
+    #mast-wrapper .item .box1 {
+      background: green;
+      width: 100%; }
+
 body, html {
   background: #EFEFF4; }
 
@@ -666,7 +694,7 @@ body, html {
 body .container {
   padding: 0 16px; }
 
-#wrapper {
+#wrapper, #mast-wrapper {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -676,7 +704,7 @@ body .container {
   background: #EFEFF4;
   overflow: hidden; }
 
-#scroller {
+#scroller, .carousel-scroll {
   position: absolute;
   z-index: 1;
   -webkit-tap-highlight-color: transparent;

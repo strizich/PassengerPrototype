@@ -6,6 +6,7 @@
 @import "modules/module";
 @import "modules/header";
 @import "modules/footer";
+@import "modules/carousel";
 
 body, html {
 	background: #EFEFF4;
@@ -23,7 +24,7 @@ body .container {
 }
 
 
-#wrapper {
+#wrapper , #mast-wrapper{
 	position: absolute;
 	z-index: 1;
 	top: 0;
@@ -34,7 +35,7 @@ body .container {
 	overflow: hidden;
 }
 
-#scroller {
+#scroller, .carousel-scroll {
 	position: absolute;
 	z-index: 1;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);

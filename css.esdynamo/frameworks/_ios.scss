@@ -1,6 +1,8 @@
+@import "frameworks/ios-variables";
+
 .ios {
 	font-family: 'SF Pro Text';
-	color: #030303;
+	color: $black;
 	-webkit-font-smoothing: antialiased;
 	padding: 0;
 	height: 100vh;
@@ -34,7 +36,7 @@
 		font: 17px "SF Pro Display";
 		letter-spacing: .22px;
 		&.headline {
-			color: #9B9B9B;
+			color: $light-grey;
 			font-weight: 600;
 		}
 	}

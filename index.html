@@ -19,48 +19,7 @@
 		<link rel='stylesheet' href='css/bootstrap.min.css'>
 		<script src='js/vendor/modernizr-2.6.2.min.js'></script>
 		<script>
-			var myScroll;
-			var position;
-			
-			function updatePosition () {
-				position.innerHTML = this.y>>0;
-				
-			}
-			
-			function loaded () {
-				position = document.getElementById('position');
-			
-				myScroll = new IScroll('#wrapper', { 
-				
-				probeType:  3,
-				    mouseWheel: true,
-				    scrollbars: 'custom',
-				    bounce: true,
-				    keyBindings: true,
-				    invertWheelDirection: false,
-				    momentum: true,
-				    fadeScrollbars: false,
-				    interactiveScrollbars: true,
-				    resizeScrollbars: true,
-				    shrinkScrollbars: false,
-				    click: false,
-				    preventDefaultException: { tagName:/.*/ }
-				});
-			
-				myScroll.on('scroll', updatePosition);
-				myScroll.on('scrollEnd', updatePosition);
-				myScroll.on('scroll', function () {
-				    if ( this.y < -75 ) {
-				        $('body').addClass('scrolled');
-				    } else {
-				    	$('body').removeClass('scrolled');
-				    }
-				});
-			}
-			
-			document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
-			
-			
+		
 		</script>
 		<script src='js/iscroll.js'></script>
 		<script src='js/iscroll-probe.js'></script>
@@ -84,10 +43,25 @@
 		<div id="wrapper">
 			<div class="scroller">
 				<div class="content">
-					<div class="container">
+					<div class="container-fluid">
 						<div class="header-group">
 							<h1 class="title">Header 1</h1>
 							<p class="headline">headline</p>
+						</div>
+						<div id="mast">
+							<div id="mast-wrapper" class="carousel">
+								<div class="carousel-scroll">
+									<div class="item">
+										<div class="box1">One</div>
+									</div>
+									<div class="item">
+										<div class="box2">Two</div>
+									</div>
+									<div class="item">
+										<div class="box3">Three</div>
+									</div>
+								</div>
+							</div>
 						</div>
 						
 						<h1>Header 1</h1>

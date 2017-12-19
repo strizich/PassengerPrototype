@@ -1,0 +1,55 @@
+.carousel {
+
+	.carousel-scroll {
+		width: 100%;
+		display: flex;
+		overflow: hidden;
+		z-index: 100;
+		position: absolute;
+		justify-content: center;
+		min-width: calc(100vw*3);
+		overflow: hidden;
+		flex-shrink: 0;
+		
+		.item{
+			min-width: 100vw;
+			height: 244px;
+			display: block;
+			background: red;
+			float:left;
+			
+			.box1 {
+				background: blue;
+				height: 100%;
+			}
+			.box2 {
+				background: green;
+				height: 100%;
+			}
+			.box3 {
+				background: purple;
+				height: 100%;
+			}	
+		}
+	}
+}
+#mast {
+	position: relative;
+	margin: 0 -16px;
+	height: 244px;
+	position: relative;
+}
+
+#mast-wrapper {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 0;
+	width: 100%;
+	background: #EFEFF4;
+	overflow: hidden;
+	z-index: 0;
+	height: 300px;
+
+}
+
