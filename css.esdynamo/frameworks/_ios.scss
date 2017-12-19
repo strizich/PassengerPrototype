@@ -1,0 +1,55 @@
+.ios {
+	font-family: 'SF Pro Text';
+	color: #030303;
+	-webkit-font-smoothing: antialiased;
+	padding: 0;
+	height: 100vh;
+	
+	h1 {
+		font-family: 'SF Pro Display';
+		font-size: 28px;
+		letter-spacing: .34px;
+		word-spacing: .11px;
+		font-weight: 500;
+		&.title {
+			font-size: 34px;
+			letter-spacing: .41px;
+			word-spacing: .13px;
+		}
+	}
+	h2 {
+		@extend h1; 
+		font-size: 22px;
+		letter-spacing: .28px;
+		word-spacing: .16px;
+	}
+	
+	h3 {
+		@extend h1;
+		font-size: 20px;
+		letter-spacing: .25px;
+		word-spacing: .19px;
+	}
+	p{
+		font: 17px "SF Pro Display";
+		letter-spacing: .22px;
+		&.headline {
+			color: #9B9B9B;
+			font-weight: 600;
+		}
+	}
+	footnote {
+		font-size: 13px;
+		letter-spacing: .13px;
+		line-height: .18px;
+	}
+	
+	.text-sm {
+		@extend footnote;
+	}
+	
+	label {
+		@extend p;
+		margin-bottom: 0;
+	}
+}

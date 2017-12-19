@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name='viewport' content='initial-scale=1, viewport-fit=cover, width=device-width'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+		<link rel='stylesheet' href='css/main.css'>
+		<link rel='stylesheet' href='css/normalize.min.css'>
+		<link rel='stylesheet' href='css/bootstrap-theme.css'>
+		<link rel='stylesheet' href='css/bootstrap.min.css'>
+		<script src='js/vendor/modernizr-2.6.2.min.js'></script>
+		<script>
+			var myScroll;
+			var position;
+			
+			function updatePosition () {
+				position.innerHTML = this.y>>0;
+				
+			}
+			
+			function loaded () {
+				position = document.getElementById('position');
+			
+				myScroll = new IScroll('#wrapper', { 
+				
+				probeType:  3,
+				    mouseWheel: true,
+				    scrollbars: 'custom',
+				    bounce: true,
+				    keyBindings: true,
+				    invertWheelDirection: false,
+				    momentum: true,
+				    fadeScrollbars: false,
+				    interactiveScrollbars: true,
+				    resizeScrollbars: true,
+				    shrinkScrollbars: false,
+				    click: false,
+				    preventDefaultException: { tagName:/.*/ }
+				});
+			
+				myScroll.on('scroll', updatePosition);
+				myScroll.on('scrollEnd', updatePosition);
+				myScroll.on('scroll', function () {
+				    if ( this.y < -75 ) {
+				        $('body').addClass('scrolled');
+				    } else {
+				    	$('body').removeClass('scrolled');
+				    }
+				});
+			}
+			
+			document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+			
+			
+		</script>
+		<script src='js/iscroll.js'></script>
+		<script src='js/iscroll-probe.js'></script>
+    </head>
+    <body class="ios" onload="loaded()">
+		<!--[if lt IE 7]>
+		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+		<header>
+			<nav>
+				<a href="#" class="left">Left</a>
+				<div class="header-group-stuck">
+					<h1 class="title">Header 1</h1>
+					<p class="headline">headline</p>
+				</div>
+				<a href="#" class="right">Right</a>
+			</nav>
+			<strong id="position">1</strong>
+		</header>
+		
+		<div id="wrapper">
+			<div class="scroller">
+				<div class="content">
+					<div class="container">
+						<div class="header-group">
+							<h1 class="title">Header 1</h1>
+							<p class="headline">headline</p>
+						</div>
+						
+						<h1>Header 1</h1>
+						<h2>Header 2</h2>
+						<h3>Header 3</h3>
+						<p class="lead">Lead</p>
+						<p class="callout">Callout</p>
+						<p class="subhead">Subhead</p>
+					
+						<footnote>Footnote</footnote>
+						<caption>Caption</caption>
+						
+						<button id="goToTop" class="btn btn-primary">Scroll To top</button>
+					</div>
+					<div class="container">
+			<input type="checkbox"/>
+						<div class="cell-header mv-commuter">
+							<span class="left text-sm">Commuter</span>
+							<span class="right text-sm">Tomorrow @ 12:35AM</span>
+						</div>
+						<div class="module--default">
+							<div class="cell">
+								<label class="form-control--cell"><span>Destination</span>
+									<input type="text" placeholder="Placeholder" />
+								</label>
+							</div>
+							<div class="cell">
+								<label class="form-control--switch">
+									<input type="checkbox"/><span>Destination</span>
+								</label>
+							</div> 
+						</div>
+						<div class="module--wide">
+							<div class="cell">
+								<label class="form-control--cell"><span>Destination</span>
+									<input type="text" placeholder="Placeholder" />
+								</label>
+							</div>
+							<div class="cell">
+								<label class="form-control--switch">
+									<input type="checkbox"/><span>Destination</span>
+								</label>
+							</div> 
+						</div>
+						<div class="module--full">
+							<div class="cell">
+								<label class="form-control--switch">
+									<input type="checkbox"/><span>Destination</span>
+								</label>
+							</div>
+							<div class="cell">
+								<label class="form-control--switch">
+									<input type="checkbox"/><span>Destination</span>
+								</label>
+							</div>
+							<div class="cell">
+								<label class="form-control--switch">
+									<input type="checkbox" value="true" /><span>Destination</span>
+								</label>
+							</div>
+							<div class="cell">
+								<label class="form-control--switch">
+									<input type="checkbox"/><span>Destination</span>
+								</label>
+							</div>
+							<div class="cell">
+								<label class="form-control--switch">
+									<input type="checkbox"/><span>Destination</span>
+								</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+    	</div>
+    	<strong id="position">0</strong>
+    	<footer class="footer-nav">
+    		<nav>
+    			<div class="commuter active">
+    				<a class="menu-trigger">
+    					<span class="tab-icon"></span>
+    					<span class="tab-title">Commuter</span>
+    				</a>
+    			</div>
+    			<div class="demand">
+    				<a class="menu-trigger">
+    					<span class="tab-icon"></span>
+    					<span class="tab-title">Demand</span>
+    				</a>	
+    			</div>
+    			<div class="fixed">
+    				<a class="menu-trigger">
+    					<span class="tab-icon"></span>
+    					<span class="tab-title">Fixed</span>
+    				</a>	
+    			</div>
+    			<div class="trips">
+    				<a class="menu-trigger">
+    					<span class="tab-icon"></span>
+    					<span class="tab-title">My Trips</span>
+    				</a>		
+    			</div>
+    			<div class="menu">
+    				<a class="menu-trigger">
+    					<span class="tab-icon"></span>
+    					<span class="tab-title">Menu</span>
+    				</a>		
+    			</div>
+    		</nav>
+    	</footer>
+	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+		<script src='js/vendor/bootstrap-3.1.1.min.js'></script>
+
+		<script src='js/main.js'></script>
+	
+    </body>
+</html>

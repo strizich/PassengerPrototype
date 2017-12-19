@@ -1,0 +1,93 @@
+footer {
+	display: flex;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	background-color: rgba(255,255,255,.5);
+	padding-bottom: 39px;
+	-webkit-backdrop-filter: blur(10px);
+	z-index: 100;
+	box-shadow: 0px -1px 0px rgba(0,0,0,.1);
+	nav{
+		display: flex;
+		height: 49px;
+		& > div {
+			width: 100%;
+			text-align: center;
+			align-self: stretch;
+			font-size: 11px;
+			font-weight:600;
+			text-align: center;
+		}
+		.commuter {
+			&.active {
+				.tab-title {
+					color: #4A90E2!important;
+				}
+				.tab-icon {
+					background: url(../images/nav/tab-1-active.svg) no-repeat center;
+				}
+			}
+			
+			.tab-title {
+				color: #9B9B9B;
+			}
+			
+			.tab-icon {
+				background: url(../images/nav/tab-1-inactive.svg) no-repeat center;
+				height: 38px;
+				width: 48px;
+				display: block;
+				margin: 0 auto;
+				margin-top: 5px;
+				margin-bottom: 2px;
+				
+			}
+		}
+		.fixed {
+			@extend .commuter;
+			.tab-icon {
+				background: url(../images/nav/tab-3-inactive.svg) no-repeat center;
+			}
+			&.active {
+				.tab-icon {
+					background: url(../images/nav/tab-3-active.svg) no-repeat center;
+				}
+			}
+		}
+		.demand {
+			@extend .commuter;
+			.tab-icon {
+				background: url(../images/nav/tab-2-inactive.svg) no-repeat center;
+			}
+			
+			&.active {
+				.tab-icon {
+					background: url(../images/nav/tab-2-active.svg) no-repeat center;
+				}
+			}
+		}
+		.trips {
+			@extend .commuter;
+			.tab-icon {
+				background: url(../images/nav/tab-4-inactive.svg) no-repeat center;
+			}
+			&.active {
+				.tab-icon {
+					background: url(../images/nav/tab-4-active.svg) no-repeat center;
+				}
+			}
+		}
+		.menu {
+			@extend .commuter;
+			.tab-icon {
+				background: url(../images/nav/tab-5-inactive.svg) no-repeat center;
+			}
+			&.active {
+				.tab-icon {
+					background: url(../images/nav/tab-5-active.svg) no-repeat center;
+				}
+			}
+		}
+	}
+}

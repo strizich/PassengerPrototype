@@ -1,0 +1,86 @@
+header {
+	transition: all .6s;
+	position: -webkit-sticky;
+	top: 0;
+	bottom: 0;
+	z-index: 10;
+	height: 88px;
+	display: flex;
+	align-items: flex-end;
+	background: rgba(255,255,255,0);
+	border-bottom:.5px solid rgba(0,0,0,0);
+	nav{
+		font-family: "SF Pro Text";
+		padding-top: 44px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 16px;
+		z-index: 100;
+		a{
+			color: #007AFF;	
+			font-size: 17px;
+			&.left {
+				background: url(../images/nav/glyph-header-right.svg) no-repeat 9px center ;
+				padding-left: 26px;
+				padding-right: 15px;
+			}
+			&.right {
+				padding-right: 9px;
+				padding-left: 15px;
+			}
+		}	
+	}
+	.header-group {		
+		&-stuck {
+			opacity: 0;
+			transition: all .2s;
+			text-align: center;
+			align-self: center;
+			.title {
+				font-size: 17px;
+			}
+			
+			.headline {
+				margin-bottom: 0;
+				font-size: 13px;
+			}
+		}
+	}
+	.header-group-stuck {
+		align-self: flex-end;
+		opacity: 0;
+		.title{
+			font-size: 17px;
+			margin: 0;
+		}
+		.headline {
+			font-size: 12px;
+		}
+	}
+}
+.scrolled {
+	header {
+		transition: background .65s, opacity .65s, -webkit-backdrop-filter 0s;
+		background: rgba(255,255,255,.54);
+		-webkit-backdrop-filter:blur(20px);
+		border-bottom:.5px solid rgba(0,0,0,.25);	
+		.header-group-stuck {
+			opacity: 1;
+		}
+	}
+	.header-group {
+		opacity: 0;
+		transition: all 1s;
+	}
+}
+.header-group {
+transition: all .3s;	
+}
+
+.position {
+	position: -webkit-sticky;
+	bottom: 210px;
+	left: 0;
+	z-index: 10000;
+}
