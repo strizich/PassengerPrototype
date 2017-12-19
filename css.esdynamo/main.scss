@@ -24,7 +24,7 @@ body .container {
 }
 
 
-#wrapper , #mast-wrapper{
+#wrapper {
 	position: absolute;
 	z-index: 1;
 	top: 0;
@@ -35,7 +35,7 @@ body .container {
 	overflow: hidden;
 }
 
-#scroller, .carousel-scroll {
+#scroller {
 	position: absolute;
 	z-index: 1;
 	-webkit-tap-highlight-color: rgba(0,0,0,0);

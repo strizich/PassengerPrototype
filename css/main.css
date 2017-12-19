@@ -656,32 +656,48 @@ footer {
     footer nav .menu.active .tab-icon {
       background: url(../images/nav/tab-5-active.svg) no-repeat center; }
 
+.carousel .carousel-scroll {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  z-index: 100;
+  position: absolute;
+  justify-content: center;
+  min-width: calc(100vw*3);
+  overflow: hidden;
+  flex-shrink: 0; }
+  .carousel .carousel-scroll .item {
+    min-width: 100vw;
+    height: 244px;
+    display: block;
+    background: red;
+    float: left; }
+    .carousel .carousel-scroll .item .box1 {
+      background: blue;
+      height: 100%; }
+    .carousel .carousel-scroll .item .box2 {
+      background: green;
+      height: 100%; }
+    .carousel .carousel-scroll .item .box3 {
+      background: purple;
+      height: 100%; }
+
 #mast {
   position: relative;
-  height: 244px; }
+  margin: 0 -16px;
+  height: 244px;
+  position: relative; }
 
 #mast-wrapper {
   position: absolute;
   z-index: 1;
   left: 0;
   right: 0;
-  width: 100vw;
+  width: 100%;
   background: #EFEFF4;
   overflow: hidden;
   z-index: 0;
-  height: 244px;
-  overflow: hidden;
-  margin: 0 -16px;
-  width: 732px; }
-  #mast-wrapper .item {
-    width: 244px;
-    height: 244px;
-    float: left;
-    background: red;
-    display: flex; }
-    #mast-wrapper .item .box1 {
-      background: green;
-      width: 100%; }
+  height: 300px; }
 
 body, html {
   background: #EFEFF4; }
@@ -694,7 +710,7 @@ body, html {
 body .container {
   padding: 0 16px; }
 
-#wrapper, #mast-wrapper {
+#wrapper {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -704,7 +720,7 @@ body .container {
   background: #EFEFF4;
   overflow: hidden; }
 
-#scroller, .carousel-scroll {
+#scroller {
   position: absolute;
   z-index: 1;
   -webkit-tap-highlight-color: transparent;

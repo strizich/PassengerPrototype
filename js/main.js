@@ -54,7 +54,7 @@ function loaded () {
 	    console.log('tick');
 	    }
 	});
-	myScroll2.goToPage(1, 0, 0);
+	myScroll2.goToPage(1, 0, 1000);
 }
 
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
