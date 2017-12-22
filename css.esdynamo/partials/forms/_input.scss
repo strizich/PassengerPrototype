@@ -8,16 +8,18 @@
 	}
 	input, select {
 		 width: 100%;
-		 margin-left: 16px;
+		 padding-left: 16px;
 		 font: 17px "SF Pro Display";
 		 text-align: right;
-		 padding: 0 0 0 16px;
+		 padding: 0 16px 0 16px;
 		 background: url(../images/glyph/glyph-carot.svg) no-repeat center right transparent;
 		 border: none;
 		 -webkit-appearance: none;
+		 transition: background .3s ease-in-out;
 		
 		&:focus {
 			outline: none;
+			background: url(../images/glyph/glyph-carot.svg) no-repeat 110%  center transparent;
 		}
 	}
 }

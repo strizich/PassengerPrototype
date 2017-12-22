@@ -63,13 +63,17 @@
 		border-radius: 12px;
 		position: relative;
 		z-index: 1;
+		padding: 8px 0;
 		&--wide {
 			@extend .module__body;
 			border-radius: 6px;
+			padding:  0;
 		}
 		&--full {
 			@extend .module__body;
 			border-radius: 0;
+			background: none;
+			padding:0;
 		}
 		
 		&--carot {

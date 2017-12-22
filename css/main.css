@@ -412,7 +412,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  min-height: 44px; }
+  height: 44px; }
   .form-control--switch span {
     display: flex;
     align-items: center;
@@ -471,24 +471,27 @@
     width: 100%; }
   .form-control--input input, .form-control--input select {
     width: 100%;
-    margin-left: 16px;
+    padding-left: 16px;
     font: 17px "SF Pro Display";
     text-align: right;
-    padding: 0 0 0 16px;
+    padding: 0 16px 0 16px;
     background: url(../images/glyph/glyph-carot.svg) no-repeat center right transparent;
     border: none;
-    -webkit-appearance: none; }
+    -webkit-appearance: none;
+    transition: background .3s ease-in-out; }
     .form-control--input input:focus, .form-control--input select:focus {
-      outline: none; }
+      outline: none;
+      background: url(../images/glyph/glyph-carot.svg) no-repeat 110% center transparent; }
 
 .cell {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 8px 16px;
-  position: relative; }
+  position: relative;
+  min-height: 44px; }
   .cell--location {
-    max-height: 55px; }
+    min-height: 55px; }
   .cell--carot {
     margin-right: 32px; }
   .cell__label {
@@ -563,11 +566,15 @@
     background-color: #ffffff;
     border-radius: 12px;
     position: relative;
-    z-index: 1; }
+    z-index: 1;
+    padding: 8px 0; }
     .module__body--wide {
-      border-radius: 6px; }
+      border-radius: 6px;
+      padding: 0; }
     .module__body--full {
-      border-radius: 0; }
+      border-radius: 0;
+      background: none;
+      padding: 0; }
     .module__body--carot {
       padding-right: 40px; }
       .module__body--carot:after {

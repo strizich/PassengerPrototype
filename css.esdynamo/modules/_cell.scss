@@ -4,9 +4,9 @@
 	align-items: center;
 	padding: 8px 16px;
 	position: relative;
-	
+	min-height: 44px;
 	&--location {
-		max-height: 55px;
+		min-height: 55px;
 	}
 	&--carot {
 		margin-right: 32px;
