@@ -10,6 +10,7 @@
 
 body, html {
 	background: #EFEFF4;
+	-webkit-font-smoothing: subpixel-antialiased;
 }
 
 .header-group {
@@ -58,14 +59,14 @@ body .container {
 }
 
 .content {
-	padding-top: 114px;
+	padding-top: calc(114px - 44px);
 	padding-bottom: 114px;
 }
 
 
 .iScrollVerticalScrollbar {
 	position: absolute;
-	top: 88px;
+	top: 44px;
 	right: 0;
 	bottom: 88px;
 	background: transparent;

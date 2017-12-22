@@ -5,7 +5,7 @@
 	color: $black;
 	-webkit-font-smoothing: antialiased;
 	padding: 0;
-	height: 100vh;
+
 	
 	h1 {
 		font-family: 'SF Pro Display';
@@ -13,6 +13,7 @@
 		letter-spacing: .34px;
 		word-spacing: .11px;
 		font-weight: 500;
+		color: $black;
 		&.title {
 			font-size: 34px;
 			letter-spacing: .41px;
@@ -35,6 +36,7 @@
 	p{
 		font: 17px "SF Pro Display";
 		letter-spacing: .22px;
+		line-height: 24px;
 		&.headline {
 			color: $light-grey;
 			font-weight: 600;
@@ -43,15 +45,35 @@
 	footnote {
 		font-size: 13px;
 		letter-spacing: .13px;
-		line-height: .18px;
+		line-height:  14px;
 	}
 	
 	.text-sm {
 		@extend footnote;
 	}
 	
-	label {
+	label, .text-value {
 		@extend p;
 		margin-bottom: 0;
+	}
+}
+
+
+.text {
+	font: 17px "SF Pro Display";
+	letter-spacing: .22px;
+	line-height: 24px;
+	margin-bottom: 0;
+	&--default {
+		letter-spacing: .22px;
+		line-height: 24px;
+		margin-bottom: 0;
+		margin-top: 4px;
+	}
+		
+	&--secondary {
+		line-height:  14px;
+		margin-bottom: 4px;
+		font-size: 12px;
 	}
 }

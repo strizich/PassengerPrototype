@@ -4,14 +4,16 @@ header {
 	top: 0;
 	bottom: 0;
 	z-index: 10;
-	height: 88px;
+	height: 64px;
 	display: flex;
 	align-items: flex-end;
-	background: rgba(255,255,255,0);
+	background: rgb(239, 238, 243);
 	border-bottom:.5px solid rgba(0,0,0,0);
+	-webkit-backdrop-filter:blur(20px);
 	nav{
 		font-family: "SF Pro Text";
-		padding-top: 44px;
+	    padding-top: 16px;
+	    padding-top: -safe-area-inset-top;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -63,8 +65,7 @@ header {
 	header {
 		transition: background .65s, opacity .65s, -webkit-backdrop-filter 0s;
 		background: rgba(255,255,255,.54);
-		-webkit-backdrop-filter:blur(20px);
-		border-bottom:.5px solid rgba(0,0,0,.25);	
+		border-bottom:.5px solid rgba(0,0,0,.12);	
 		.header-group-stuck {
 			opacity: 1;
 		}
@@ -75,7 +76,7 @@ header {
 	}
 }
 .header-group {
-transition: all .3s;	
+	transition: all .3s;	
 }
 
 .position {

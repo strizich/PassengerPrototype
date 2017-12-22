@@ -18,9 +18,6 @@
 		<link rel='stylesheet' href='css/bootstrap-theme.css'>
 		<link rel='stylesheet' href='css/bootstrap.min.css'>
 		<script src='js/vendor/modernizr-2.6.2.min.js'></script>
-		<script>
-		
-		</script>
 		<script src='js/iscroll.js'></script>
 		<script src='js/iscroll-probe.js'></script>
     </head>
@@ -37,7 +34,6 @@
 				</div>
 				<a href="#" class="right">Right</a>
 			</nav>
-			<strong id="position">1</strong>
 		</header>
 		
 		<div id="wrapper">
@@ -76,68 +72,91 @@
 						
 						<button id="goToTop" class="btn btn-primary">Scroll To top</button>
 					</div>
+					
 					<div class="container">
-			<input type="checkbox"/>
-						<div class="cell-header mv-commuter">
-							<span class="left text-sm">Commuter</span>
-							<span class="right text-sm">Tomorrow @ 12:35AM</span>
+						<div class="module">
+							<div class="module__header module__header--commuter">
+								<span class="module__header--title">one</span> <span class="module__header--date">2</span>
+							</div>
+							<div class="module__body module__body--carot">
+								<div class="cell cell--location">
+									<div class="cell__label">
+										<span class="text text--primary">From</span>
+									</div>
+									<div class="cell__group cell__group--align-right">
+										<span class="text text--primary">Alias</span>
+										<address class="text text--secondary">1234546</address>
+									</div>
+								</div>
+								<div class="cell cell__location">
+									<div class="cell__label">
+										<span class="text text--primary">To</span>
+									</div>
+									<div class="cell__group cell__group--align-right">
+										<span class="text text--primary">Alias</span>
+										<address class="text text--secondary">1234546</address>
+									</div>
+								</div>
+							</div>
 						</div>
-						<div class="module--default">
-							<div class="cell">
-								<label class="form-control--cell"><span>Destination</span>
-									<input type="text" placeholder="Placeholder" />
-								</label>
+						
+						<div class="module module--wide">
+							<div class="module__body">
+								<div class="cell cell--location">
+									<div class="cell__label">
+										<span class="text text--primary">From</span>
+									</div>
+									<div class="cell__group cell__group--align-right">
+										<span class="text text--primary">Alias</span>
+										<address class="text text--secondary">1234546</address>
+									</div>
+								</div>
+								<div class="cell cell__location">
+									<div class="cell__label">
+										<span class="text text--primary">To</span>
+									</div>
+									<div class="cell__group cell__group--align-right">
+										<span class="text text--primary">Alias</span>
+										<address class="text text--secondary">1234546</address>
+									</div>
+								</div>
 							</div>
-							<div class="cell">
-								<label class="form-control--switch">
-									<input type="checkbox"/><span>Destination</span>
-								</label>
-							</div> 
 						</div>
-						<div class="module--wide">
-							<div class="cell">
-								<label class="form-control--cell"><span>Destination</span>
-									<input type="text" placeholder="Placeholder" />
-								</label>
+						<div class="module module--full">
+							<div class="module__body">
+								<div class="cell cell--form-group">
+										<label class="form-control--input">
+											<span class="text text--primary">Destination</span> <input type="text"/>
+										</label>
+								</div>
+								<div class="cell cell--form-group">
+										<label class="form-control--switch">
+											<input type="checkbox"/><span class="text text--primary">Destination</span>
+										</label>
+								</div>
 							</div>
-							<div class="cell">
-								<label class="form-control--switch">
-									<input type="checkbox"/><span>Destination</span>
-								</label>
-							</div> 
 						</div>
-						<div class="module--full">
-							<div class="cell">
-								<label class="form-control--switch">
-									<input type="checkbox"/><span>Destination</span>
-								</label>
-							</div>
-							<div class="cell">
-								<label class="form-control--switch">
-									<input type="checkbox"/><span>Destination</span>
-								</label>
-							</div>
-							<div class="cell">
-								<label class="form-control--switch">
-									<input type="checkbox" value="true" /><span>Destination</span>
-								</label>
-							</div>
-							<div class="cell">
-								<label class="form-control--switch">
-									<input type="checkbox"/><span>Destination</span>
-								</label>
-							</div>
-							<div class="cell">
-								<label class="form-control--switch">
-									<input type="checkbox"/><span>Destination</span>
-								</label>
+						<div class="module module--full">
+							<div class="module__body">
+								<div class="cell cell--form-group">
+									<label class="form-control--input">
+										<span class="text text--primary">Destination</span> <input type="text"/>
+									</label>
+								</div>
+								<div class="cell cell--form-group">
+									<label class="form-control--input">
+										<span class="text text--primary">Destination</span> <select><option></option></select>
+									</label>
+								</div>
 							</div>
 						</div>
 					</div>
+					
+					
+				
 				</div>
 			</div>
     	</div>
-    	<strong id="position">0</strong>
     	<footer class="footer-nav">
     		<nav>
     			<div class="commuter active">

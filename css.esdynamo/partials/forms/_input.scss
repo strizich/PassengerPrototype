@@ -1,9 +1,22 @@
-label {
-	font-size: 16px;
-}
-
-input {
-	font-size: 17px;
-	margin-bottom: 0;
-	color: #8F8E94;
+.form-control--input {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	label {
+		width: 100%;
+	}
+	input, select {
+		 width: 100%;
+		 margin-left: 16px;
+		 font: 17px "SF Pro Display";
+		 text-align: right;
+		 padding-right: 16px;
+		 background: url(../images/glyph/glyph-carot.svg) no-repeat center right transparent;
+		 border: none;
+		 -webkit-appearance: none;
+		
+		&:focus {
+			outline: none;
+		}
+	}
 }

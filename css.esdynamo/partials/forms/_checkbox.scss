@@ -2,8 +2,8 @@
 	width: 100%;
 	display: flex;
 	align-items: center;
+	min-height: 44px;
 	span {
-		width: 100%;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -30,11 +30,14 @@
 				background-color:#fff;
 				vertical-align:-5px;
 				margin-right:16px;	
-				border: .5px solid rgba(0,0,0,0.10);
 				border-radius: 40px;
 				top: calc(50% - 14.5px);
-				box-shadow: inset 0px 0px 0px 0px #4CD964;
+				box-shadow:  inset 0px 0px 0px 0px #4CD964;
 			}
+			&:after {
+				border: 1px solid rgba(0,0,0,0.10);
+			}
+			
 			&:before {
 				right: 21px;
 				width: 28px;
@@ -44,9 +47,9 @@
 				margin-right:17px;	
 				/* Knob: */
 				background: #FFFFFF;
-				border: 1 solid rgba(0,0,0,0.10);
-				box-shadow: 0 3px 1px 0 rgba(0,0,0,0.05), 0 2px 2px 0 rgba(0,0,0,0.10), 0 3px 3px 0 rgba(0,0,0,0.05);
 				
+				box-shadow: 0 3px 1px 0 rgba(0,0,0,.01), 0 2px 2px 0 rgba(0,0,0,0.15), 0 3px 3px 0 rgba(0,0,0,0.05);
+				border: 1px solid rgba(0,0,0,0.05);
 				
 			}
 		}
@@ -55,11 +58,11 @@
 			box-shadow: inset 0px 0px 0px 30px #4CD964;
 			border: 1px solid #4CD964;
 			z-index: 1;
-			transition: box-shadow .24s .15s ease-in-out, border .24s .15s ease-in-out;
 		}
 		&:checked + span:before {
 			background: #fff;
 			border-radius: 30px;
+			
 			transform:translate3d(20px,0,0) ;
 			
 		}

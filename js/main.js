@@ -1,15 +1,15 @@
 var myScroll;
 var position;
 
-function updatePosition () {
-	position.innerHTML = this.y>>0;
-	
-}
+//function updatePosition () {
+//	position.innerHTML = this.y>>0;
+//	
+//}
 
 function loaded () {
-	position = document.getElementById('position');
+//	position = document.getElementById('position');
 	snap = document.getElementById('snap');
-	myScroll = new IScroll('#wrapper', { 
+	bodyScroll = new IScroll('#wrapper', { 
 	probeType:  3,
 	    mouseWheel: true,
 	    scrollbars: 'custom',
@@ -38,9 +38,9 @@ function loaded () {
 	    preventDefaultException: { tagName:/.*/ }
 	});
 	
-	myScroll.on('scroll', updatePosition);
-	myScroll.on('scrollEnd', updatePosition);
-	myScroll.on('scroll', function () {
+//	bodyScroll.on('scroll', updatePosition);
+//	bodyScroll.on('scrollEnd', updatePosition);
+	bodyScroll.on('scroll', function () {
 	    if ( this.y < -75 ) {
 	        $('body').addClass('scrolled');
 	    } else {
