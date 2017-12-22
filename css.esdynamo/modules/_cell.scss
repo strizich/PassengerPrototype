@@ -11,10 +11,20 @@
 	&--carot {
 		margin-right: 32px;
 	}
+	&__label {
+		min-width: 56px;
+	}
 	
 	&__group {	
 		&--align-right {
 			text-align: right;
+		}
+	}
+	&__group {	
+		&--align-left {
+			text-align: left;
+			justify-content: flex-start;
+			width: 100%;
 		}
 	}
 	&:after {

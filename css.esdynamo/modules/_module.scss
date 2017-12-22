@@ -63,6 +63,15 @@
 		border-radius: 12px;
 		position: relative;
 		z-index: 1;
+		&--wide {
+			@extend .module__body;
+			border-radius: 6px;
+		}
+		&--full {
+			@extend .module__body;
+			border-radius: 0;
+		}
+		
 		&--carot {
 			padding-right: 40px;
 			&:after {

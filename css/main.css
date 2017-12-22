@@ -465,6 +465,7 @@
 .form-control--input {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 100%; }
   .form-control--input label {
     width: 100%; }
@@ -473,7 +474,7 @@
     margin-left: 16px;
     font: 17px "SF Pro Display";
     text-align: right;
-    padding-right: 16px;
+    padding: 0 0 0 16px;
     background: url(../images/glyph/glyph-carot.svg) no-repeat center right transparent;
     border: none;
     -webkit-appearance: none; }
@@ -490,8 +491,14 @@
     max-height: 55px; }
   .cell--carot {
     margin-right: 32px; }
+  .cell__label {
+    min-width: 56px; }
   .cell__group--align-right {
     text-align: right; }
+  .cell__group--align-left {
+    text-align: left;
+    justify-content: flex-start;
+    width: 100%; }
   .cell:after {
     height: 1px;
     content: '';
@@ -552,11 +559,15 @@
     .module__header--date {
       font-weight: 500;
       text-align: right; }
-  .module__body {
+  .module__body, .module__body--wide, .module__body--full {
     background-color: #ffffff;
     border-radius: 12px;
     position: relative;
     z-index: 1; }
+    .module__body--wide {
+      border-radius: 6px; }
+    .module__body--full {
+      border-radius: 0; }
     .module__body--carot {
       padding-right: 40px; }
       .module__body--carot:after {
