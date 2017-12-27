@@ -26,18 +26,6 @@ function loaded () {
 	    preventDefaultException: { tagName:/.*/ }
 	});
 	
-	myScroll2 = new IScroll('#mast-wrapper', { 
-	    mouseWheel: false,
-	    scrollbars: false,
-	    bounce: true,
-	    momentum: true,
-	    click: false,
-	    scrollX: true, 
-	    scrollY: false,
-	    snap:'.carousel-scroll .item',
-	    preventDefaultException: { tagName:/.*/ }
-	});
-	
 //	bodyScroll.on('scroll', updatePosition);
 //	bodyScroll.on('scrollEnd', updatePosition);
 	bodyScroll.on('scroll', function () {
@@ -47,14 +35,28 @@ function loaded () {
 	    	$('body').removeClass('scrolled');
 	    }
 	});
-	
-	myScroll2.on('scrollEnd', function () {
-	    console.log(this.currentPage);
-	    if(this.pageX == 2){
-	    console.log('tick');
-	    }
-	});
-	myScroll2.goToPage(1, 0, 1000);
+}
+
+function mastLoaded() {
+
+myScroll2 = new IScroll('#mast-wrapper', { 
+    mouseWheel: false,
+    scrollbars: false,
+    bounce: true,
+    momentum: true,
+    click: false,
+    scrollX: true, 
+    scrollY: false,
+    snap:'.carousel-scroll .item',
+    preventDefaultException: { tagName:/.*/ }
+});
+myScroll2.on('scrollEnd', function () {
+    console.log(this.currentPage);
+    if(this.pageX == 2){
+    console.log('tick');
+    }
+});
+myScroll2.goToPage(1, 0, 1000);
 }
 
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
