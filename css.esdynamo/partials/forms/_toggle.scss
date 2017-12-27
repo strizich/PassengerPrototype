@@ -1,0 +1,58 @@
+.form-group--toggle {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+.form-group--label {
+	width: 100%;
+}
+
+.form-control--toggle {
+	display: flex;
+	align-items: center;
+	height: 44px;
+	justify-content: flex-end;
+	&:first-child {
+		span {
+			border-radius: 4px 0 0 4px;
+			border: .5px solid $primary;
+			border-right: .5px solid #fff;
+		}
+	}
+	&:last-child {
+		span {
+			border-radius: 0 4px 4px 0;
+			border: .5px solid $primary;
+		}
+	}
+	
+	span {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 4px 8px;	
+	}
+	
+	input[type="radio"]{
+		border: 0; 
+		clip: rect(0 0 0 0); 
+		height: 1px; margin: -1px; 
+		overflow: hidden; 
+		padding: 0; 
+		position: absolute; 
+		width: 1px;
+		
+		
+		& + span{
+			background-color: #fff;
+			font-size: 13px;
+			color: $primary;
+			transition: all .22s ease-in-out;
+		}
+		&:checked + span {
+			background-color: $primary;
+			border: .5px solid $primary;
+			color: $white;
+		}
+	}
+}

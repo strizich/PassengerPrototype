@@ -1,0 +1,25 @@
+.mast__map {
+	padding-bottom: 24px;
+	position: relative;
+	&:after {
+		position: absolute;
+		background-color: #fff;
+		height: 55px;
+		content: '';
+		width: auto;
+		left: -16px;
+		right: -16px;
+		bottom: 0;
+		z-index: 0;
+		
+	}
+}
+
+#map {
+	height: 181px;
+	width: 100%;
+	border-radius: 12px;
+	box-shadow: 0 -16px 24px -20px rgba(0, 0, 0, 0.25), 0px 10px 20px -10px rgba(0, 0, 0, 0.5);
+	position: relative;
+	z-index: 1;
+}

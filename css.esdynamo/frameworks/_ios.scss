@@ -18,6 +18,7 @@
 			font-size: 34px;
 			letter-spacing: .41px;
 			word-spacing: .13px;
+			font-weight: 700;
 		}
 	}
 	h2 {
@@ -39,7 +40,7 @@
 		line-height: 24px;
 		&.headline {
 			color: $light-grey;
-			font-weight: 600;
+			font-weight: 700;
 		}
 	}
 	footnote {
@@ -64,6 +65,21 @@
 	letter-spacing: .22px;
 	line-height: 24px;
 	margin-bottom: 0;
+	&__time {
+		&--from {
+			&:after {
+				background: url(../images/glyph/glyph-arrow-right.svg) no-repeat center center;
+				width: 16px;
+				height: 12px;
+				content: '';
+				display: inline-block;
+				margin:  0 4px;
+
+
+			}
+		}
+	}
+	
 	&--default {
 		letter-spacing: .22px;
 		line-height: 24px;
@@ -76,4 +92,23 @@
 		margin-bottom: 4px;
 		font-size: 12px;
 	}
+	&--available {
+		color: $available;
+	}
+	&--warning {
+		color:  $warning;
+	}
+	&--waitlist {
+		color: $notice;
+	}
+	&--pickup {
+		color: $pickup;
+	}
+	&--dropoff {
+		color: $dropoff;
+	}
+}
+
+.text-group {
+	display: flex;
 }

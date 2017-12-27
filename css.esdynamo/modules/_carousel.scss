@@ -1,17 +1,16 @@
 .carousel {
 	.carousel-scroll {
-		width: 100%;
+		width: calc(75vw * 3);
 		display: flex;
 		overflow: hidden;
 		z-index: 100;
 		position: absolute;
 		justify-content: center;
-		min-width: calc(100vw*3);
 		overflow: hidden;
 		flex-shrink: 0;
 		
 		.item{
-			min-width: 100vw;
+			min-width: 75vw;
 			height: 244px;
 			display: block;
 			padding: 16px 24px;
