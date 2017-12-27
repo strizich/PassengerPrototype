@@ -371,7 +371,7 @@
       font-size: 34px;
       letter-spacing: .41px;
       word-spacing: .13px;
-      font-weight: 700; }
+      font-weight: 600; }
   .ios h2 {
     font-size: 22px;
     letter-spacing: .28px;
@@ -386,7 +386,7 @@
     line-height: 24px; }
     .ios p.headline, .ios label.headline, .ios .headline.text-value {
       color: #9B9B9B;
-      font-weight: 700; }
+      font-weight: 600; }
   .ios footnote, .ios .text-sm {
     font-size: 13px;
     letter-spacing: .13px;
