@@ -32,80 +32,87 @@
 				<a href="#" class="right">Right</a>
 			</nav>
 		</header>
+		
 		<div id="wrapper">
 			<div class="scroller">
 				<div class="content">
 					<div class="container-fluid">
-						<div class="header-group">
-							<h1 class="title">Kirkland Lot</h1>
-							<p class="headline">123456 Streetname Rd.</p>
-						</div>
-						<div class="mast__map">
-							 <div id="map"></div>
+						<div class="col-sm-12">
+							<div class="header-group">
+								<h1 class="title">Kirkland Lot</h1>
+								<p class="headline">123456 Streetname Rd.</p>
+							</div>
 						</div>
 					</div>
 					
-					<div class="container">		
-						<div class="module module--full module--mast">
-							<div class="module__body--full">
-								<div class="cell cell--form-group">
+					<div class="container-fluid">
+						
+							<div class="mast__map col-md-6 ">
+								 <div id="map"></div>
+							</div>
+							<div class="col-md-6">
+							<div class="module module--full module--mast ">
+								<div class="module__body--full">
+									<div class="cell cell--form-group">
+											<label class="form-control--input">
+												<span class="text text--primary">Destination</span> <input type="text" value="Doppler"/>
+											</label>
+									</div>
+									<div class="cell cell--form-group">
+										<div class="form-group--label">
+											<span class="text text--primary">Time of day</span>
+										</div>
+										<div class="form-group--toggle">
+											<label class="form-control--toggle">
+												<input type="radio" name="time-of-day"/><span class="text text--primary">Morning</span>
+											</label>
+											<label class="form-control--toggle">
+												<input type="radio" name="time-of-day"/><span class="text text--primary">Evening</span>
+											</label>
+										</div>
+									</div>
+									<div class="cell cell--form-group">
 										<label class="form-control--input">
-											<span class="text text--primary">Destination</span> <input type="text" value="Doppler"/>
+											<span class="text text--primary">Date</span> <input type="date" value="12/27/2017" />
 										</label>
-								</div>
-								<div class="cell cell--form-group">
-									<div class="form-group--label">
-										<span class="text text--primary">Time of day</span>
 									</div>
-									<div class="form-group--toggle">
-										<label class="form-control--toggle">
-											<input type="radio" name="time-of-day"/><span class="text text--primary">Morning</span>
-										</label>
-										<label class="form-control--toggle">
-											<input type="radio" name="time-of-day"/><span class="text text--primary">Evening</span>
+									<div class="cell cell--text">
+										<label class="form-control--input">
+											<span class="text text--primary">Parking</span> <span class="text text--primary text--available">Parking Available (12)</span>
 										</label>
 									</div>
 								</div>
-								<div class="cell cell--form-group">
-									<label class="form-control--input">
-										<span class="text text--primary">Date</span> <input type="date" value="12/27/2017" />
-									</label>
-								</div>
-								<div class="cell cell--text">
-									<label class="form-control--input">
-										<span class="text text--primary">Parking</span> <span class="text text--primary text--available">Parking Available (12)</span>
-									</label>
-								</div>
+								
 							</div>
 							
-						</div>
-						
-						<div class="module module--wide">
-							<div class="module__body--wide">
-								<div class="cell cell--clickable">
-									<div class="cell__group cell__group--align-left">
-										<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
-										<span class="text text--secondary text--available">Seats Available (2)</span>
+							<div class="module module--wide">
+								<div class="module__body--wide">
+									<div class="cell cell--clickable">
+										<div class="cell__group cell__group--align-left">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
+											<span class="text text--secondary text--available">Seats Available (2)</span>
+										</div>
+									</div>
+									<div class="cell cell--clickable">
+										<div class="cell__group cell__group--align-left">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
+											<span class="text text--secondary text--available">Seats Available (12)</span>
+										</div>
+									</div>
+									<div class="cell cell--clickable">
+										<div class="cell__group cell__group--align-left">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
+											<span class="text text--secondary text--available">Seats Available (12)</span>
+										</div>
+									</div>
+									<div class="cell cell--clickable">
+										<div class="cell__group cell__group--align-left">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
+											<span class="text text--secondary text--available">Seats Available (12)</span>
+										</div>
 									</div>
 								</div>
-								<div class="cell cell--clickable">
-									<div class="cell__group cell__group--align-left">
-										<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
-										<span class="text text--secondary text--available">Seats Available (12)</span>
-									</div>
-								</div>
-								<div class="cell cell--clickable">
-									<div class="cell__group cell__group--align-left">
-										<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
-										<span class="text text--secondary text--available">Seats Available (12)</span>
-									</div>
-								</div>
-								<div class="cell cell--clickable">
-									<div class="cell__group cell__group--align-left">
-										<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
-										<span class="text text--secondary text--available">Seats Available (12)</span>
-									</div>
-								</div>
+							</div>
 							</div>
 						</div>
 					</div>

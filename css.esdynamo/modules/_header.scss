@@ -12,7 +12,16 @@ header {
 	border-bottom:.5px solid rgba(0,0,0,0);
 	-webkit-backdrop-filter:blur(20px);
 	padding-top: env(safe-area-inset-top);
-
+	&:before {
+		content: '';
+		height: env(safe-area-inset-top);
+		top: 0;
+		display: block;
+		background: rgba(0, 121, 255, 0.58);
+		position: fixed;
+		width: 100%;
+		
+	}
 	
 	nav{
 		font-family: "SF Pro Text";
@@ -98,4 +107,10 @@ header {
 	bottom: 210px;
 	left: 0;
 	z-index: 10000;
+}
+
+@media only screen and (max-width: 993px) {
+	.header-group {
+		padding:0 16px!important;
+	}
 }

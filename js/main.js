@@ -10,7 +10,7 @@ function loaded () {
 //	position = document.getElementById('position');
 	snap = document.getElementById('snap');
 	bodyScroll = new IScroll('#wrapper', { 
-	probeType:  3,
+		probeType:  3,
 	    mouseWheel: true,
 	    scrollbars: 'custom',
 	    bounce: true,
@@ -22,8 +22,7 @@ function loaded () {
 	    resizeScrollbars: true,
 	    shrinkScrollbars: false,
 	    click: false,
-	    
-	    preventDefaultException: { tagName:/.*/ }
+	    preventDefaultException: { tagName:/.*/ }  
 	});
 	
 //	bodyScroll.on('scroll', updatePosition);
@@ -33,6 +32,14 @@ function loaded () {
 	        $('body').addClass('scrolled');
 	    } else {
 	    	$('body').removeClass('scrolled');
+	    }
+	    if ( this.directionY == 1){
+	    	$('body').addClass('scrollDown');
+	    	$('body').removeClass('scrollUp');
+	    }
+	    else if ( this.directionY == -1){
+	    	$('body').addClass('scrollUp');
+	    	$('body').removeClass('scrollDown');
 	    }
 	});
 }
