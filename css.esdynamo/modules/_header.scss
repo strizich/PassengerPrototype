@@ -27,6 +27,9 @@ header {
 		a{
 			color: #007AFF;	
 			font-size: 17px;
+			height: 44px;
+			align-items: center;
+			display: flex;
 			&.left {
 				background: url(../images/nav/glyph-header-right.svg) no-repeat 9px center ;
 				padding-left: 26px;
@@ -41,16 +44,22 @@ header {
 	.header-group {		
 		&-stuck {
 			opacity: 0;
-			transition: all .2s;
+			transition: background .2s, opacity .2s, border-bottom .2s, -webkit-backdrop-filter .2s;
 			text-align: center;
 			align-self: center;
 			.title {
 				font-size: 17px;
+				color: #4A4A4A;
 			}
 			
 			.headline {
 				margin-bottom: 0;
 				font-size: 13px;
+				color: #4A4A4A;
+				font-weight:400;
+				letter-spacing: 1px;
+				line-height: 15px;
+				padding-bottom:5px;
 			}
 		}
 	}

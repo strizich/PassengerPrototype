@@ -707,7 +707,10 @@ header {
     z-index: 100; }
     header nav a {
       color: #007AFF;
-      font-size: 17px; }
+      font-size: 17px;
+      height: 44px;
+      align-items: center;
+      display: flex; }
       header nav a.left {
         background: url(../images/nav/glyph-header-right.svg) no-repeat 9px center;
         padding-left: 26px;
@@ -717,14 +720,20 @@ header {
         padding-left: 15px; }
   header .header-group-stuck {
     opacity: 0;
-    transition: all .2s;
+    transition: background .2s, opacity .2s, border-bottom .2s, -webkit-backdrop-filter .2s;
     text-align: center;
     align-self: center; }
     header .header-group-stuck .title {
-      font-size: 17px; }
+      font-size: 17px;
+      color: #4A4A4A; }
     header .header-group-stuck .headline {
       margin-bottom: 0;
-      font-size: 13px; }
+      font-size: 13px;
+      color: #4A4A4A;
+      font-weight: 400;
+      letter-spacing: 1px;
+      line-height: 15px;
+      padding-bottom: 5px; }
   header .header-group-stuck {
     align-self: flex-end;
     opacity: 0; }
@@ -758,7 +767,7 @@ footer {
   display: flex;
   position: fixed;
   width: 100%;
-  bottom: 1px;
+  bottom: 0px;
   background-color: rgba(255, 255, 255, 0.9);
   -webkit-backdrop-filter: blur(10px);
   z-index: 100;
