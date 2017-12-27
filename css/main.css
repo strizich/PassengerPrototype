@@ -916,13 +916,17 @@ body .container {
 .content {
   margin-top: env(safe-area-inset-top);
   padding-top: calc(114px - 44px);
-  padding-bottom: 114px; }
+  padding-bottom: 130px;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-left); }
 
 .iScrollVerticalScrollbar {
   position: absolute;
   top: 44px;
+  top: env(safe-area-inset-top);
   right: 0;
   bottom: 88px;
+  top: env(safe-area-inset-bottom);
   background: transparent;
   width: 6px; }
 
