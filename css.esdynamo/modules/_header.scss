@@ -4,12 +4,14 @@ header {
 	top: 0;
 	bottom: 0;
 	z-index: 10;
-	height: 64px;
+	min-height: 64px;
 	display: flex;
 	align-items: flex-end;
 	background: rgb(239, 238, 243);
 	border-bottom:.5px solid rgba(0,0,0,0);
 	-webkit-backdrop-filter:blur(20px);
+	padding-top: env(safe-area-inset-top);
+	
 	nav{
 		font-family: "SF Pro Text";
 	    padding-top: 16px;
@@ -17,8 +19,9 @@ header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin-bottom: 16px;
+		margin-bottom: 0px;
 		z-index: 100;
+		
 		a{
 			color: #007AFF;	
 			font-size: 17px;

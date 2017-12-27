@@ -19,14 +19,17 @@
 		&--align-right {
 			text-align: right;
 		}
-	}
-	&__group {	
 		&--align-left {
 			text-align: left;
 			justify-content: flex-start;
 			width: 100%;
 		}
 	}
+	&--clickable {
+		background: url(../images/glyph/glyph-carot.svg) center no-repeat;
+		background-position-x: calc(100% - 16px);
+	}
+	
 	&:after {
 		height: 1px;
 		content: '';

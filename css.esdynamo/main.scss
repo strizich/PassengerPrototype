@@ -13,6 +13,7 @@
 body, html {
 	background: #EFEFF4;
 	-webkit-font-smoothing: subpixel-antialiased;
+	min-height: 100vh;
 }
 
 .header-group {
@@ -36,6 +37,7 @@ body .container {
 	width: 100%;
 	background: #EFEFF4;
 	overflow: hidden;
+	height: 100vh;
 }
 
 #scroller {
@@ -61,6 +63,7 @@ body .container {
 }
 
 .content {
+	margin-top: env(safe-area-inset-top);
 	padding-top: calc(114px - 44px);
 	padding-bottom: 114px;
 }

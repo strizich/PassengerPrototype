@@ -516,7 +516,8 @@
   display: flex;
   align-items: center;
   height: 44px;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  padding: 4px 0; }
   .form-control--toggle:first-child span {
     border-radius: 4px 0 0 4px;
     border: 0.5px solid #007AFF;
@@ -528,7 +529,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 4px 8px; }
+    padding: 0px 8px; }
   .form-control--toggle input[type="radio"] {
     border: 0;
     clip: rect(0 0 0 0);
@@ -589,6 +590,9 @@
     text-align: left;
     justify-content: flex-start;
     width: 100%; }
+  .cell--clickable {
+    background: url(../images/glyph/glyph-carot.svg) center no-repeat;
+    background-position-x: calc(100% - 16px); }
   .cell:after {
     height: 1px;
     content: '';
@@ -620,6 +624,8 @@
     border-bottom: 0.5px solid rgba(0, 0, 0, 0.25);
     padding: 0;
     background: #ffffff; }
+    .module--full.module--mast {
+      border-top: none; }
   .module__header {
     display: flex;
     max-height: 55px;
@@ -682,12 +688,13 @@ header {
   top: 0;
   bottom: 0;
   z-index: 10;
-  height: 64px;
+  min-height: 64px;
   display: flex;
   align-items: flex-end;
   background: #efeef3;
   border-bottom: 0.5px solid transparent;
-  -webkit-backdrop-filter: blur(20px); }
+  -webkit-backdrop-filter: blur(20px);
+  padding-top: env(safe-area-inset-top); }
   header nav {
     font-family: "SF Pro Text";
     padding-top: 16px;
@@ -695,7 +702,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
+    margin-bottom: 0px;
     z-index: 100; }
     header nav a {
       color: #007AFF;
@@ -750,15 +757,16 @@ footer {
   display: flex;
   position: fixed;
   width: 100%;
-  bottom: 0;
+  bottom: 1px;
   background-color: rgba(255, 255, 255, 0.9);
-  padding-bottom: 39px;
+  padding-bottom: calc(env(safe-area-inset-bottom) -16px);
   -webkit-backdrop-filter: blur(10px);
   z-index: 100;
   box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1); }
   footer nav {
     display: flex;
-    height: 49px; }
+    padding-top: 4px;
+    padding-bottom: 16px; }
     footer nav > div {
       width: 100%;
       text-align: center;
@@ -774,7 +782,7 @@ footer {
       color: #9B9B9B; }
     footer nav .commuter .tab-icon, footer nav .fixed .tab-icon, footer nav .demand .tab-icon, footer nav .trips .tab-icon, footer nav .menu .tab-icon {
       background: url(../images/nav/tab-1-inactive.svg) no-repeat center;
-      height: 38px;
+      height: 23px;
       width: 48px;
       display: block;
       margin: 0 auto;
@@ -852,7 +860,8 @@ footer {
 
 body, html {
   background: #EFEFF4;
-  -webkit-font-smoothing: subpixel-antialiased; }
+  -webkit-font-smoothing: subpixel-antialiased;
+  min-height: 100vh; }
 
 .header-group {
   margin-bottom: 16px; }
@@ -870,7 +879,8 @@ body .container {
   left: 0;
   width: 100%;
   background: #EFEFF4;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 100vh; }
 
 #scroller {
   position: absolute;
@@ -894,6 +904,7 @@ body .container {
   text-size-adjust: none; }
 
 .content {
+  margin-top: env(safe-area-inset-top);
   padding-top: calc(114px - 44px);
   padding-bottom: 114px; }
 

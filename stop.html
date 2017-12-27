@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name='viewport' content='initial-scale=1, viewport-fit=cover, width=device-width'>
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
 		<link rel='stylesheet' href='css/main.css'>
@@ -46,7 +46,7 @@
 					</div>
 					
 					<div class="container">		
-						<div class="module module--full">
+						<div class="module module--full module--mast">
 							<div class="module__body--full">
 								<div class="cell cell--form-group">
 										<label class="form-control--input">
@@ -82,25 +82,25 @@
 						
 						<div class="module module--wide">
 							<div class="module__body--wide">
-								<div class="cell">
+								<div class="cell cell--clickable">
 									<div class="cell__group cell__group--align-left">
 										<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
 										<span class="text text--secondary text--available">Seats Available (2)</span>
 									</div>
 								</div>
-								<div class="cell">
+								<div class="cell cell--clickable">
 									<div class="cell__group cell__group--align-left">
 										<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
 										<span class="text text--secondary text--available">Seats Available (12)</span>
 									</div>
 								</div>
-								<div class="cell">
+								<div class="cell cell--clickable">
 									<div class="cell__group cell__group--align-left">
 										<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
 										<span class="text text--secondary text--available">Seats Available (12)</span>
 									</div>
 								</div>
-								<div class="cell">
+								<div class="cell cell--clickable">
 									<div class="cell__group cell__group--align-left">
 										<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
 										<span class="text text--secondary text--available">Seats Available (12)</span>
@@ -160,7 +160,9 @@
 		        // Create a map object and specify the DOM element for display.
 		        var map = new google.maps.Map(document.getElementById('map'), {
 		          center: {lat: -34.397, lng: 150.644},
-		          zoom: 8
+		          zoom: 8,
+		          gestureHandling: 'none',
+		          zoomControl: false
 		        });
 		      }
 		    </script>
