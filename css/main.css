@@ -767,7 +767,7 @@ footer {
     display: flex;
     padding-top: 4px;
     padding-bottom: 16px;
-    margin-bottom: calc(env(safe-area-inset-bottom)); }
+    margin-bottom: env(safe-area-inset-bottom); }
     footer nav > div {
       width: 100%;
       text-align: center;
