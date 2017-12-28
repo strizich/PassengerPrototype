@@ -14,6 +14,12 @@ footer {
 		padding-top: 4px;
 		padding-bottom: 16px;
 		margin-bottom: env(safe-area-inset-bottom);
+		a{
+			&:hover {
+				text-decoration: none;
+				cursor: pointer;
+			}
+		}
 		& > div {
 			width: 100%;
 			text-align: center;
@@ -22,20 +28,22 @@ footer {
 			font-weight:600;
 			text-align: center;
 		}
-		.commuter {
-			&.active {
-				.tab-title {
-					color: #4A90E2!important;
-				}
-				.tab-icon {
-					background: url(../images/nav/tab-1-active.svg) no-repeat center;
-				}
-			}
-			
+		
+		.active {
 			.tab-title {
-				color: #9B9B9B;
+				color: $primary;
 			}
-			
+			.tab-icon {
+				background: url(../images/nav/tab-1-active.svg) no-repeat center;
+			}
+		}
+		.tab-title {
+			color: #9B9B9B;
+			&:hover {
+				color: $primary;
+			}
+		}
+		.commuter {
 			.tab-icon {
 				background: url(../images/nav/tab-1-inactive.svg) no-repeat center;
 				height: 23px;
@@ -44,9 +52,14 @@ footer {
 				margin: 0 auto;
 				margin-top: 5px;
 				margin-bottom: 2px;
-				
+			}
+			&.active {
+				.tab-icon {
+					background: url(../images/nav/tab-1-active.svg) no-repeat center;
+				}
 			}
 		}
+		
 		.fixed {
 			@extend .commuter;
 			.tab-icon {

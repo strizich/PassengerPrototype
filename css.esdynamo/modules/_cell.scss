@@ -16,13 +16,38 @@
 	}
 	
 	&__group {	
+		width: 100%;
+		align-items: center;
 		&--align-right {
 			text-align: right;
+			justify-content: flex-end;
 		}
 		&--align-left {
 			text-align: left;
 			justify-content: flex-start;
 			width: 100%;
+			
+		}
+		&--list {
+			display: flex;
+			align-items: center;
+			.text{
+				display: flex;
+				align-items:center;
+				&:after {
+					width: 3px;
+					height: 3px;
+					background: url(../images/glyph/glyph-disc.svg);
+					display: block;
+					content: '';
+					margin: 0 4px;
+				}
+				&:last-child:after {
+					display: none;
+				}
+			}
+			
+		
 		}
 	}
 	&--clickable {
@@ -44,5 +69,41 @@
 	}
 	&--form-group {
 		max-height: 44px;
+	}
+}
+
+&--wide, &--full {
+	margin: 0 -8px 24px;
+	border-radius: 6px;
+	.cell {
+		padding: 16px;
+		&--clickable {
+			background: url(../images/glyph/glyph-carot.svg) center no-repeat;
+			background-position-x: calc(100% - 8px);
+		}
+	}
+}
+
+@media only screen and (max-width: 993px) {
+	.module--wide {
+		.cell {
+			padding: 8px 16px;
+			&--clickable {
+				background-position-x: calc(100% - 8px);
+			}
+		}
+		
+	}
+	
+	.module--full {
+		.cell {
+			padding: 8px 24px ;
+			&--clickable {
+				background-position-x: calc(100% - 8px);
+			}
+			&:after {
+				margin-left: 8px;
+			}
+		}
 	}
 }

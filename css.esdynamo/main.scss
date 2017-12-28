@@ -1,6 +1,7 @@
 @import "partials/typography/sf";
 @import "frameworks/ios";
-@import "partials/forms/checkbox";
+@import "partials/forms/radio";
+@import "partials/forms/switch";
 @import "partials/forms/input";
 @import "partials/forms/toggle";
 @import "partials/maps/mast";
@@ -11,7 +12,7 @@
 @import "modules/carousel";
 
 body, html {
-	background: #EFEFF4;
+	background: $body-bg;
 	-webkit-font-smoothing: subpixel-antialiased;
 	min-height: 100vh;
 }
