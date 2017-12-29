@@ -1,0 +1,124 @@
+.cal {
+	&__wrapper {
+		margin:0 0 16px;
+		padding-bottom: 1px;
+		border-bottom: 1px solid $light-grey;
+		border-top: 1px solid $light-grey;
+		background: rgba(255,255,255,.54);
+		&:after {
+			clear: both;
+			content: '';
+			display: block;
+		}
+	}
+	&__week {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		padding:0 16px;
+		margin-top: 16px;
+		margin-bottom: 32px;
+	}
+	&__day {
+		margin-top: 24px;
+		text-align: center;
+		width: 48px;
+		height: 48px;
+		display: flex;
+		flex-wrap: wrap;
+		margin: 1px;
+		&--active {
+			box-shadow: 0 5px 10px -6px rgba(74,74,74,0.54);
+			border-radius: 3px;
+			background: $white;
+			
+		}
+		&--inactive {
+			.day__number {
+				color: rgba(74, 74, 74, 0.74);	
+			}
+			.day__name {
+				color: rgba(74, 74, 74, 0.74);	
+			}
+		}
+		&--waitlist {
+			
+		}
+		&--disabled {
+			.day__number {
+				color: $light-grey;	
+			}
+			.day__name {
+				color: $light-grey;
+			}
+		}
+	}
+}
+
+.indicator {
+	&__page {
+		display: flex;
+		height: 6px;
+		justify-content: space-between;
+		width: 80px;
+		margin: 0 auto;
+		margin-top: 0px;
+		position: absolute;
+		bottom: 16px;
+		left: 50%;
+		margin-left: -40px;
+	}
+	
+	&__disc {
+		width: 8px;
+		height: 8px;
+		background: $light-grey;
+		border-radius: 6px;
+		&--active {
+			background: $black;
+		}
+	}
+	
+	&__carot {
+		position: absolute;
+		height: 100%;
+		background: url(../images/glyph/glyph-carot.svg) no-repeat center center;
+		text-indent: -10000px;
+		display: block;
+		width: 16px;
+		&--left {
+			@extend .indicator__carot;
+			position: absolute;
+			left: 8px;
+			transform: rotateZ(180deg);
+		}
+		&--right {
+			@extend .indicator__carot;
+			position: absolute;
+			right: 8px;	
+		}
+	}
+	
+
+}
+
+.day {
+	&__number {
+		font-size: 17px;
+		color: #000000;	
+		display: block;
+		width: 100%;
+		line-height: 20px;
+		margin-top: 5px;
+	}
+	&__name {
+		/* MON: */
+		font-size: 11px;
+		color: #000000;
+		text-transform: uppercase;
+		display: block;
+		width: 100%;
+		line-height: 13px;
+		margin-bottom: 5px;
+	}
+}

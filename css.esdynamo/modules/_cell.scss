@@ -18,6 +18,11 @@
 	&__group {	
 		width: 100%;
 		align-items: center;
+		&--options {
+			text-align: right;
+			flex-shrink: 1;
+		}
+		
 		&--align-right {
 			text-align: right;
 			justify-content: flex-end;

@@ -10,8 +10,12 @@
 	
 	&--disabled {
 		.module__header {
+			
 			&--day {
 				background-color: $body-bg;
+				border: .5px solid $dark-grey;
+				display: flex;
+				justify-content: space-between;
 			}
 		}
 	}

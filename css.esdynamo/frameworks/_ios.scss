@@ -62,10 +62,11 @@
 
 
 .text {
-	font: 17px "SF Pro Display";
+	font: 16px "SF Pro Display";
 	letter-spacing: .22px;
 	line-height: 24px;
 	margin-bottom: 0;
+	
 	&-group {
 		display: flex;
 		width: 100%;

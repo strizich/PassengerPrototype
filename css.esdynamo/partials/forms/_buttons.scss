@@ -1,0 +1,57 @@
+.btn {
+	padding: 15px 16px;
+	text-transform: uppercase;
+	transition: all .22s;
+	&:focus {
+		outline: none;
+	}
+	
+	&--xs {
+		padding: 4px 8px;
+		font-size: 11px;
+	}
+	&--sm {
+		
+	}
+	&--lg {
+		
+	}
+	&--rounded {
+		border-radius: 10.5px;
+	}
+	
+	&--primary {
+		
+	}
+	&--default {
+		background: transparent;
+		border: 1px solid $light-grey;
+		color: #9B9B9B;
+		&:hover {
+			background: $light-grey;
+			outline: none;
+		}
+		
+	}
+	&--book {
+		
+	}
+	&--cancel {
+		
+	}
+	
+	&__social {
+		&--amz {
+			
+		}
+		&--fb {
+			
+		}
+		&--g{
+			
+		}
+		&--mv {
+			
+		}
+	}
+}
