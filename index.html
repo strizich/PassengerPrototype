@@ -9,11 +9,10 @@
         <title></title>
         <meta name="description" content="">
         <meta name='viewport' content='initial-scale=1, viewport-fit=cover, width=device-width'>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-		
+	
 		<link rel='stylesheet' href='css/normalize.min.css'>
 		<link rel='stylesheet' href='css/bootstrap-theme.css'>
 		<link rel='stylesheet' href='css/bootstrap.min.css'>
@@ -22,7 +21,7 @@
 		<script src='js/iscroll.js'></script>
 		<script src='js/iscroll-probe.js'></script>
     </head>
-    <body class="ios" onload="loaded(); mastLoaded();">
+    <body class="ios" onload="loaded();">
 		<!--[if lt IE 7]>
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
@@ -71,7 +70,7 @@
 					
 						<footnote>Footnote</footnote>
 						<caption>Caption</caption>
-						<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+						<button type="button" class="btn btn-primary btn-lg modal-trigger" data-toggle="modal" data-target="#myModal">
 						  Launch demo modal
 						</button>
 						
@@ -79,7 +78,6 @@
 					</div>
 					
 					<div class="container">
-
 						<div class="module">
 							<div class="module__header module__header--commuter">
 								<span class="module__header--title">Commuter</span> <span class="module__header--date">Tomorrow, 12/25/2017 @ 8:25am</span>
@@ -231,111 +229,215 @@
     	      		<a href="#" class="right">Right</a>
     	      	</nav>
     	      </header>
-    	      <div class="modal-body">
-
-    	        	<div class="module module--wide">
-    	        		<div class="module__header--day">
-    	        			<div class="cell__group">
-    	        				<div class="text-group">
-    	        					<span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span> 
-    	        				</div>
-    	        				<div class="cell__group cell__group--list">
-    	        					<span class="text text--secondary text--available">Seats Available (2)</span>
-    	        					<span class="text text--secondary text--link">Seats Available (2)</span>
-    	        				</div>
-    	        			</div>
-    	        			<div class="cell__group cell__group--options">
-    	        				
-    	        			</div>
-    	        		</div>
-    	        		<div class="module__body module__body--wide">
-    	        			<div class="cell">
-    	        				<label class="form-group--radio">
-    	        					<div class="form-control--radio">
-    	        						<input type="radio" name="monday"/>
-    	        						<span></span>
-    	        					</div>
-    	        					<div class="cell__group">
-    	        						<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
-    	        						<span class="text text--secondary text--available">Seats Available (2)</span>									
-    	        					</div>
-    	        				</label>
-    	        			</div>
-    	        			<div class="cell">
-    	        				<label class="form-group--radio">
-    	        					<div class="form-control--radio">
-    	        						<input type="radio" name="monday"/>
-    	        						<span></span>
-    	        					</div>
-    	        					<div class="cell__group">
-    	        						<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
-    	        						<span class="text text--secondary text--available">Seats Available (2)</span>									
-    	        					</div>
-    	        				</label>
-    	        			</div>
-    	        			<div class="cell">
-    	        				<label class="form-group--radio">
-    	        					<div class="form-control--radio">
-    	        						<input type="radio" name="monday"/>
-    	        						<span></span>
-    	        					</div>
-    	        					<div class="cell__group">
-    	        						<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
-    	        						<span class="text text--secondary text--available">Seats Available (2)</span>									
-    	        					</div>
-    	        				</label>
-    	        			</div>
-    	        			<div class="cell">
-    	        				<label class="form-group--radio">
-    	        					<div class="form-control--radio">
-    	        						<input type="radio" name="monday"/>
-    	        						<span></span>
-    	        					</div>
-    	        					<div class="cell__group">
-    	        						<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
-    	        						<span class="text text--secondary text--available">Seats Available (2)</span>									
-    	        					</div>
-    	        				</label>
-    	        			</div>
-    	        			<div class="cell">
-    	        				<label class="form-group--radio">
-    	        					<div class="form-control--radio">
-    	        						<input type="radio" name="monday"/>
-    	        						<span></span>
-    	        					</div>
-    	        					<div class="cell__group">
-    	        						<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
-    	        						<span class="text text--secondary text--available">Seats Available (2)</span>									
-    	        					</div>
-    	        				</label>
-    	        			</div>
-    	        			
-    	        		</div>
-    	        		<div class="module__footer">
-    	        			<div class="cell">
-    	        				<div class="cell__group">
-    	        					<a class="text text--caption text--warning" href="">Show More</a>
-    	        				</div>
-    	        				<div class="cell__group cell__group--align-right cell__group--list">
-    	        					<a class="text text--caption text--link" href="">Show More</a>
-    	        					<a class="text text--caption text--link" href="">Show More</a>
-    	        				</div>
-    	        			</div>
+    	      <div id="modal-scroll" class="modal-body">
+    	        	<div id="scroller">
+    	        		<div class="content">
+	    	        	<div class="module module--wide">
+	    	        		<div class="module__header--day">
+	    	        			<div class="cell__group">
+	    	        				<div class="text-group">
+	    	        					<span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span> 
+	    	        				</div>
+	    	        				<div class="cell__group cell__group--list">
+	    	        					<span class="text text--secondary text--available">Seats Available (2)</span>
+	    	        					<span class="text text--secondary text--link">Seats Available (2)</span>
+	    	        				</div>
+	    	        			</div>
+	    	        			<div class="cell__group cell__group--options">
+	    	        				
+	    	        			</div>
+	    	        		</div>
+	    	        		<div class="module__body module__body--wide">
+	    	        			<div class="cell">
+	    	        				<label class="form-group--radio">
+	    	        					<div class="form-control--radio">
+	    	        						<input type="radio" name="monday"/>
+	    	        						<span></span>
+	    	        					</div>
+	    	        					<div class="cell__group">
+	    	        						<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
+	    	        						<span class="text text--secondary text--available">Seats Available (2)</span>									
+	    	        					</div>
+	    	        				</label>
+	    	        			</div>
+	    	        			<div class="cell">
+	    	        				<label class="form-group--radio">
+	    	        					<div class="form-control--radio">
+	    	        						<input type="radio" name="monday"/>
+	    	        						<span></span>
+	    	        					</div>
+	    	        					<div class="cell__group">
+	    	        						<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
+	    	        						<span class="text text--secondary text--available">Seats Available (2)</span>									
+	    	        					</div>
+	    	        				</label>
+	    	        			</div>
+	    	        			<div class="cell">
+	    	        				<label class="form-group--radio">
+	    	        					<div class="form-control--radio">
+	    	        						<input type="radio" name="monday"/>
+	    	        						<span></span>
+	    	        					</div>
+	    	        					<div class="cell__group">
+	    	        						<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
+	    	        						<span class="text text--secondary text--available">Seats Available (2)</span>									
+	    	        					</div>
+	    	        				</label>
+	    	        			</div>
+	    	        			<div class="cell">
+	    	        				<label class="form-group--radio">
+	    	        					<div class="form-control--radio">
+	    	        						<input type="radio" name="monday"/>
+	    	        						<span></span>
+	    	        					</div>
+	    	        					<div class="cell__group">
+	    	        						<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
+	    	        						<span class="text text--secondary text--available">Seats Available (2)</span>									
+	    	        					</div>
+	    	        				</label>
+	    	        			</div>
+	    	        			<div class="cell">
+	    	        				<label class="form-group--radio">
+	    	        					<div class="form-control--radio">
+	    	        						<input type="radio" name="monday"/>
+	    	        						<span></span>
+	    	        					</div>
+	    	        					<div class="cell__group">
+	    	        						<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
+	    	        						<span class="text text--secondary text--available">Seats Available (2)</span>									
+	    	        					</div>
+	    	        				</label>
+	    	        			</div>
+	    	        			
+	    	        		</div>
+	    	        		<div class="module__footer">
+	    	        			<div class="cell">
+	    	        				<div class="cell__group">
+	    	        					<a class="text text--caption text--warning" href="">Show More</a>
+	    	        				</div>
+	    	        				<div class="cell__group cell__group--align-right cell__group--list">
+	    	        					<a class="text text--caption text--link" href="">Show More</a>
+	    	        					<a class="text text--caption text--link" href="">Show More</a>
+	    	        				</div>
+	    	        			</div>
+	    	        		</div>
+	    	        	</div>
+	    	        	<div class="module module--wide module--disabled">
+	    	        		<div class="module__header--day">
+	    	        			<div class="cell__group cell__group--align-left">
+	    	        				<div class="text-group">
+	    	        					<span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span> 
+	    	        				</div>
+	    	        			</div>
+	    	        			<div class="cell__group cell__group--options">
+	    	        				<button class="btn btn--xs btn--default btn--rounded">Show Schedule</button>
+	    	        			</div>
+	    	        		</div>
+	    	        	</div>
+						<div class="module module--wide">
+							<div class="module__header--day">
+								<div class="cell__group">
+									<div class="text-group">
+										<span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span> 
+									</div>
+									<div class="cell__group cell__group--list">
+										<span class="text text--secondary text--available">Seats Available (2)</span>
+										<span class="text text--secondary text--link">Seats Available (2)</span>
+									</div>
+								</div>
+								<div class="cell__group cell__group--options">
+									
+								</div>
+							</div>
+							<div class="module__body module__body--wide">
+								<div class="cell">
+									<label class="form-group--radio">
+										<div class="form-control--radio">
+											<input type="radio" name="monday"/>
+											<span></span>
+										</div>
+										<div class="cell__group">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
+											<span class="text text--secondary text--available">Seats Available (2)</span>									
+										</div>
+									</label>
+								</div>
+								<div class="cell">
+									<label class="form-group--radio">
+										<div class="form-control--radio">
+											<input type="radio" name="monday"/>
+											<span></span>
+										</div>
+										<div class="cell__group">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
+											<span class="text text--secondary text--available">Seats Available (2)</span>									
+										</div>
+									</label>
+								</div>
+								<div class="cell">
+									<label class="form-group--radio">
+										<div class="form-control--radio">
+											<input type="radio" name="monday"/>
+											<span></span>
+										</div>
+										<div class="cell__group">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
+											<span class="text text--secondary text--available">Seats Available (2)</span>									
+										</div>
+									</label>
+								</div>
+								<div class="cell">
+									<label class="form-group--radio">
+										<div class="form-control--radio">
+											<input type="radio" name="monday"/>
+											<span></span>
+										</div>
+										<div class="cell__group">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
+											<span class="text text--secondary text--available">Seats Available (2)</span>									
+										</div>
+									</label>
+								</div>
+								<div class="cell">
+									<label class="form-group--radio">
+										<div class="form-control--radio">
+											<input type="radio" name="monday"/>
+											<span></span>
+										</div>
+										<div class="cell__group">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
+											<span class="text text--secondary text--available">Seats Available (2)</span>									
+										</div>
+									</label>
+								</div>
+								
+							</div>
+							<div class="module__footer">
+								<div class="cell">
+									<div class="cell__group">
+										<a class="text text--caption text--warning" href="">Show More</a>
+									</div>
+									<div class="cell__group cell__group--align-right cell__group--list">
+										<a class="text text--caption text--link" href="">Show More</a>
+										<a class="text text--caption text--link" href="">Show More</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="module module--wide module--disabled">
+							<div class="module__header--day">
+								<div class="cell__group cell__group--align-left">
+									<div class="text-group">
+										<span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span> 
+									</div>
+								</div>
+								<div class="cell__group cell__group--options">
+									<button class="btn btn--xs btn--default btn--rounded">Show Schedule</button>
+								</div>
+							</div>
+						</div>
     	        		</div>
     	        	</div>
-    	        	<div class="module module--wide module--disabled">
-    	        		<div class="module__header--day">
-    	        			<div class="cell__group cell__group--align-left">
-    	        				<div class="text-group">
-    	        					<span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span> 
-    	        				</div>
-    	        			</div>
-    	        			<div class="cell__group cell__group--options">
-    	        				<button class="btn btn--xs btn--default btn--rounded">Show Schedule</button>
-    	        			</div>
-    	        		</div>
-    	        	</div>
-
     	      </div>
     	      <div class="modal-footer">
     	        <button type="button" class="btn btn--lg btn--success">Next</button>
@@ -344,12 +446,9 @@
     	  </div>
     	</div>
     	
-    	
 	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-
 		<script src='js/vendor/bootstrap-3.1.1.min.js'></script>
-
 		<script src='js/main.js'></script>
 	
     </body>

@@ -21,7 +21,7 @@
 	}
 	
 	&--primary {
-		background: transparent;
+		background: $primary;
 		border: 1px solid $primary;
 		color: #9B9B9B;
 	}
@@ -32,8 +32,7 @@
 		&:hover {
 			background: $light-grey;
 			outline: none;
-		}
-		
+		}	
 	}
 	&--book {
 		background: transparent;

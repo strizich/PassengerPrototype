@@ -613,7 +613,7 @@
   .btn--rounded {
     border-radius: 10.5px; }
   .btn--primary {
-    background: transparent;
+    background: #007AFF;
     border: 1px solid #007AFF;
     color: #9B9B9B; }
   .btn--default {
@@ -635,17 +635,17 @@
   opacity: 1 !important; }
 
 .modal.fade .modal-dialog {
-  -webkit-transform: translate(0, 200%) !important;
-  -ms-transform: translate(0, 200%) !important;
-  transform: translate(0, 200%) !important;
-  transition: transform 0.6s ease-in-out, opacity 0s sease-in-out !important;
+  -webkit-transform: translate3d(0, 100%, 0) !important;
+  -ms-transform: translate3d(0, 100%, 0) !important;
+  transform: translate3d(0, 100%, 0) !important;
+  transition: transform 0.4s ease-in-out, opacity 0s sease-in-out !important;
   opacity: 1; }
 
 .modal.in .modal-dialog {
-  -webkit-transform: translate(0, 0) !important;
-  -ms-transform: translate(0, 0) !important;
-  transform: translate(0, 0) !important;
-  transition: transform 0.6s ease-in-out, opacity 0s ease-in-out !important;
+  -webkit-transform: translate3d(0, 0, 0) !important;
+  -ms-transform: translate3d(0, 0, 0) !important;
+  transform: translate(0, 0, 0) !important;
+  transition: transform 0.4s ease-in-out, opacity 0s ease-in-out !important;
   opacity: 1 !important; }
 
 .modal {
@@ -661,7 +661,7 @@
     background: #fff; }
 
 .mobile--fullscreen {
-  transition: transform 0.6s ease-in-out, opacity 0.6s 0.6s ease-in-out !important; }
+  transition: transform 0.4s ease-in-out !important; }
   .mobile--fullscreen .modal-dialog {
     width: 100% !important;
     margin: 0;
@@ -674,17 +674,20 @@
     position: absolute;
     top: 0px;
     bottom: 0px;
-    padding: 64px 16px; }
+    padding: 0;
+    -webkit-overflow-scrolling: touch; }
+    .mobile--fullscreen .modal-body .content {
+      padding: 80px 16px 160px; }
   .mobile--fullscreen .modal-content {
     padding: 0;
     width: 100% !important;
     border: none;
     border-radius: 0;
     box-shadow: none;
-    height: 100%; }
+    height: 100vh; }
   .mobile--fullscreen .modal-footer {
     bottom: 0;
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 64px;
     padding: 0;
@@ -1229,7 +1232,7 @@ nav {
 body .container {
   padding: 0 16px; }
 
-#wrapper {
+#wrapper, #modal-scroll {
   position: absolute;
   z-index: 1;
   top: 0;

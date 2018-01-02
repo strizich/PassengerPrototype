@@ -39,7 +39,21 @@ function loaded () {
 	    click: false,
 	    preventDefaultException: { tagName:/.*/ }  
 	});
-	
+modalScroll = new IScroll('.modal-body', { 
+	probeType:  3,
+    mouseWheel: true,
+    scrollbars: 'custom',
+    bounce: true,
+    keyBindings: true,
+    invertWheelDirection: false,
+    momentum: true,
+    fadeScrollbars: true,
+    interactiveScrollbars: true,
+    resizeScrollbars: true,
+    shrinkScrollbars: false,
+    click: false,
+    preventDefaultException: { tagName:/.*/ }  
+});
 //	bodyScroll.on('scroll', updatePosition);
 //	bodyScroll.on('scrollEnd', updatePosition);
 
@@ -59,6 +73,16 @@ function loaded () {
 	    }
 	});
 	
+	$('.modal-trigger').on('click', function(){
+		setTimeout(function () {
+	       myScroll = new IScroll('#modal-scroll', {
+	           mouseWheel: true,
+	           scrollbars: true
+	       });
+	   }, 500);
+	   alert('i triggered');
+	});
+	   
 }
 
 function mastLoaded() {
@@ -83,5 +107,6 @@ myScroll2.on('scrollEnd', function () {
 });
 myScroll2.goToPage(1, 0, 1000);
 }
+
 
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
