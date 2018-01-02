@@ -37,10 +37,11 @@ function loaded () {
 	    resizeScrollbars: true,
 	    shrinkScrollbars: false,
 	    click: false,
+	    deceleration: 0.001,
 	    preventDefaultException: { tagName:/.*/ }  
 	});
 modalScroll = new IScroll('.modal-body', { 
-	probeType:  3,
+	probeType:  1,
     mouseWheel: true,
     scrollbars: 'custom',
     bounce: true,
@@ -58,7 +59,7 @@ modalScroll = new IScroll('.modal-body', {
 //	bodyScroll.on('scrollEnd', updatePosition);
 
 	bodyScroll.on('scroll', function () {
-	    if ( this.y < -75 ) {
+	    if ( this.y <= -75 ) {
 	        $('body').addClass('scrolled');
 	    } else {
 	    	$('body').removeClass('scrolled');
@@ -83,7 +84,6 @@ modalScroll = new IScroll('.modal-body', {
 	           preventDefaultException: { tagName:/.*/ }
 	       });
 	   }, 500);
-	   alert('i triggered');
 	});
 	   
 }
