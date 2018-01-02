@@ -1,10 +1,12 @@
 .cal {
+	position: relative;
 	&__wrapper {
 		margin:0 0 16px;
 		padding-bottom: 1px;
 		border-bottom: 1px solid $light-grey;
 		border-top: 1px solid $light-grey;
 		background: rgba(255,255,255,.54);
+		position: relative;
 		&:after {
 			clear: both;
 			content: '';
@@ -64,14 +66,14 @@
 		margin: 0 auto;
 		margin-top: 0px;
 		position: absolute;
-		bottom: 16px;
+		bottom: 8px;
 		left: 50%;
 		margin-left: -40px;
 	}
 	
 	&__disc {
-		width: 8px;
-		height: 8px;
+		width: 4px;
+		height: 4px;
 		background: $light-grey;
 		border-radius: 6px;
 		&--active {

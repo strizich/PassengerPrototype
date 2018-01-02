@@ -21,7 +21,9 @@
 	}
 	
 	&--primary {
-		
+		background: transparent;
+		border: 1px solid $primary;
+		color: #9B9B9B;
 	}
 	&--default {
 		background: transparent;
@@ -34,7 +36,9 @@
 		
 	}
 	&--book {
-		
+		background: transparent;
+		border: 1px solid $success;
+		color: #9B9B9B;
 	}
 	&--cancel {
 		

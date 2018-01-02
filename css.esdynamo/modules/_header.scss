@@ -82,8 +82,10 @@ header {
 		.headline {
 			font-size: 12px;
 		}
+
 	}
 }
+
 .scrolled {
 	header {
 		transition: background .65s, opacity .65s, -webkit-backdrop-filter 0s;
@@ -98,6 +100,18 @@ header {
 		transition: all 1s;
 	}
 }
+
+.scroll--locked {
+	background: rgba(255,255,255,.54);
+	.header-group {
+		opacity: 1;
+	}
+	.header-group-stuck {
+		opacity: 1;
+		
+	}
+}
+
 .header-group {
 	transition: all .3s;	
 }

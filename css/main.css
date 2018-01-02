@@ -46,7 +46,8 @@
   .text-group {
     display: flex;
     width: 100%;
-    align-items: flex-end; }
+    align-items: flex-end;
+    align-self: center; }
   .text__time--from:after {
     background: url(../images/glyph/glyph-arrow-right.svg) no-repeat center center;
     width: 16px;
@@ -611,6 +612,10 @@
     font-size: 11px; }
   .btn--rounded {
     border-radius: 10.5px; }
+  .btn--primary {
+    background: transparent;
+    border: 1px solid #007AFF;
+    color: #9B9B9B; }
   .btn--default {
     background: transparent;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -618,6 +623,79 @@
     .btn--default:hover {
       background: rgba(0, 0, 0, 0.1);
       outline: none; }
+  .btn--book {
+    background: transparent;
+    border: 1px solid #60AD06;
+    color: #9B9B9B; }
+
+.ios .modal-backdrop.fade.in, .ios .modal-backdrop {
+  display: none !important; }
+
+.fade, .fade.in {
+  opacity: 1 !important; }
+
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0, 200%) !important;
+  -ms-transform: translate(0, 200%) !important;
+  transform: translate(0, 200%) !important;
+  transition: transform 0.6s ease-in-out, opacity 0s sease-in-out !important;
+  opacity: 1; }
+
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0) !important;
+  -ms-transform: translate(0, 0) !important;
+  transform: translate(0, 0) !important;
+  transition: transform 0.6s ease-in-out, opacity 0s ease-in-out !important;
+  opacity: 1 !important; }
+
+.modal {
+  overflow-y: none !important;
+  overflow: hidden !important; }
+  .modal .mobile--fullscreen {
+    margin: 0;
+    height: auto;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    top: 0;
+    background: #fff; }
+
+.mobile--fullscreen {
+  transition: transform 0.6s ease-in-out, opacity 0.6s 0.6s ease-in-out !important; }
+  .mobile--fullscreen .modal-dialog {
+    width: 100% !important;
+    margin: 0;
+    top: 0;
+    box-shadow: none; }
+  .mobile--fullscreen .modal-body {
+    max-height: 100vh;
+    width: 100%;
+    overflow-y: auto;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    padding: 64px 16px; }
+  .mobile--fullscreen .modal-content {
+    padding: 0;
+    width: 100% !important;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    height: 100%; }
+  .mobile--fullscreen .modal-footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 64px;
+    padding: 0;
+    margin-top: 0;
+    display: flex;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.54);
+    -webkit-backdrop-filter: blur(20px); }
+    .mobile--fullscreen .modal-footer .btn {
+      width: 100%;
+      margin: 8px; }
 
 .mast__map {
   padding-bottom: 24px;
@@ -719,11 +797,12 @@
   .module--wide .cell {
     padding: 8px 16px; }
     .module--wide .cell--clickable {
-      background-position-x: calc(100% - 8px); }
+      background-position-x: calc(100% - 16px);
+      padding: 8px 40px 8px 16px; }
   .module--full .cell {
     padding: 8px 24px; }
     .module--full .cell--clickable {
-      background-position-x: calc(100% - 8px); }
+      background-position-x: calc(100% - 16px); }
     .module--full .cell:after {
       margin-left: 8px; } }
 
@@ -907,6 +986,13 @@ header {
   opacity: 0;
   transition: all 1s; }
 
+.scroll--locked {
+  background: rgba(255, 255, 255, 0.54); }
+  .scroll--locked .header-group {
+    opacity: 1; }
+  .scroll--locked .header-group-stuck {
+    opacity: 1; }
+
 .header-group {
   transition: all .3s; }
 
@@ -942,7 +1028,7 @@ footer {
       text-align: center;
       align-self: stretch;
       font-size: 11px;
-      font-weight: 600;
+      font-weight: 50000;
       text-align: center; }
     footer nav .active .tab-title {
       color: #007AFF; }
@@ -1019,7 +1105,8 @@ footer {
   position: relative;
   margin: 0 -16px;
   height: 244px;
-  position: relative; }
+  position: relative;
+  display: none; }
 
 #mast-wrapper {
   position: absolute;
@@ -1032,45 +1119,46 @@ footer {
   z-index: 0;
   height: 300px; }
 
-.cal__wrapper {
-  margin: 0 0 16px;
-  padding-bottom: 1px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.54); }
-  .cal__wrapper:after {
-    clear: both;
-    content: '';
-    display: block; }
-
-.cal__week {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0 16px;
-  margin-top: 16px;
-  margin-bottom: 32px; }
-
-.cal__day {
-  margin-top: 24px;
-  text-align: center;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 1px; }
-  .cal__day--active {
-    box-shadow: 0 5px 10px -6px rgba(74, 74, 74, 0.54);
-    border-radius: 3px;
-    background: #ffffff; }
-  .cal__day--inactive .day__number {
-    color: rgba(74, 74, 74, 0.74); }
-  .cal__day--inactive .day__name {
-    color: rgba(74, 74, 74, 0.74); }
-  .cal__day--disabled .day__number {
-    color: rgba(0, 0, 0, 0.1); }
-  .cal__day--disabled .day__name {
-    color: rgba(0, 0, 0, 0.1); }
+.cal {
+  position: relative; }
+  .cal__wrapper {
+    margin: 0 0 16px;
+    padding-bottom: 1px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.54);
+    position: relative; }
+    .cal__wrapper:after {
+      clear: both;
+      content: '';
+      display: block; }
+  .cal__week {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 16px;
+    margin-top: 16px;
+    margin-bottom: 32px; }
+  .cal__day {
+    margin-top: 24px;
+    text-align: center;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1px; }
+    .cal__day--active {
+      box-shadow: 0 5px 10px -6px rgba(74, 74, 74, 0.54);
+      border-radius: 3px;
+      background: #ffffff; }
+    .cal__day--inactive .day__number {
+      color: rgba(74, 74, 74, 0.74); }
+    .cal__day--inactive .day__name {
+      color: rgba(74, 74, 74, 0.74); }
+    .cal__day--disabled .day__number {
+      color: rgba(0, 0, 0, 0.1); }
+    .cal__day--disabled .day__name {
+      color: rgba(0, 0, 0, 0.1); }
 
 .indicator__page {
   display: flex;
@@ -1080,13 +1168,13 @@ footer {
   margin: 0 auto;
   margin-top: 0px;
   position: absolute;
-  bottom: 16px;
+  bottom: 8px;
   left: 50%;
   margin-left: -40px; }
 
 .indicator__disc {
-  width: 8px;
-  height: 8px;
+  width: 4px;
+  height: 4px;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 6px; }
   .indicator__disc--active {
@@ -1175,20 +1263,23 @@ body .container {
 
 .content {
   margin-top: env(safe-area-inset-top);
-  padding-top: calc(114px - 44px);
-  padding-bottom: 130px;
   padding-left: env(safe-area-inset-left);
   padding-right: env(safe-area-inset-left); }
 
 .iScrollVerticalScrollbar {
   position: absolute;
-  top: 44px;
-  top: env(safe-area-inset-top);
+  top: 64px;
   right: 0;
-  bottom: 88px;
+  bottom: 66px;
   top: env(safe-area-inset-bottom);
   background: transparent;
   width: 6px; }
+
+.header__placeholder {
+  height: 64px; }
+
+.footer__placeholder {
+  height: 64px; }
 
 .iScrollIndicator {
   background: rgba(0, 0, 0, 0.25);

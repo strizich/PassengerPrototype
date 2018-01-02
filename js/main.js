@@ -7,8 +7,23 @@ var position;
 //}
 
 function loaded () {
+//Calender Scroller
+//calScroll = new IScroll('.cal__wrapper', { 
+//    mouseWheel: false,
+//    scrollbars: false,
+//    bounce: true,
+//    momentum: true,
+//    click: false,
+//    scrollX: true, 
+//    scrollY: false,
+//    snap:'.cal__week',
+//    preventDefaultException: { tagName:/.*/ }
+//});
+
+//Body Scroller
 //	position = document.getElementById('position');
 	snap = document.getElementById('snap');
+	
 	bodyScroll = new IScroll('#wrapper', { 
 		probeType:  3,
 	    mouseWheel: true,
@@ -17,7 +32,7 @@ function loaded () {
 	    keyBindings: true,
 	    invertWheelDirection: false,
 	    momentum: true,
-	    fadeScrollbars: false,
+	    fadeScrollbars: true,
 	    interactiveScrollbars: true,
 	    resizeScrollbars: true,
 	    shrinkScrollbars: false,
@@ -27,6 +42,7 @@ function loaded () {
 	
 //	bodyScroll.on('scroll', updatePosition);
 //	bodyScroll.on('scrollEnd', updatePosition);
+
 	bodyScroll.on('scroll', function () {
 	    if ( this.y < -75 ) {
 	        $('body').addClass('scrolled');
@@ -42,10 +58,11 @@ function loaded () {
 	    	$('body').removeClass('scrollDown');
 	    }
 	});
+	
 }
 
 function mastLoaded() {
-
+//Mast scroller
 myScroll2 = new IScroll('#mast-wrapper', { 
     mouseWheel: false,
     scrollbars: false,
@@ -57,6 +74,7 @@ myScroll2 = new IScroll('#mast-wrapper', {
     snap:'.carousel-scroll .item',
     preventDefaultException: { tagName:/.*/ }
 });
+
 myScroll2.on('scrollEnd', function () {
     console.log(this.currentPage);
     if(this.pageX == 2){
