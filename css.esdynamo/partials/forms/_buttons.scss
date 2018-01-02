@@ -2,6 +2,7 @@
 	padding: 15px 16px;
 	text-transform: uppercase;
 	transition: all .22s;
+	width: 100%;
 	&:focus {
 		outline: none;
 	}
@@ -23,7 +24,7 @@
 	&--primary {
 		background: $primary;
 		border: 1px solid $primary;
-		color: #9B9B9B;
+		color: $white;
 	}
 	&--default {
 		background: transparent;

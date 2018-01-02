@@ -604,7 +604,8 @@ body {
 .btn {
   padding: 15px 16px;
   text-transform: uppercase;
-  transition: all .22s; }
+  transition: all .22s;
+  width: 100%; }
   .btn:focus {
     outline: none; }
   .btn--xs {
@@ -615,7 +616,7 @@ body {
   .btn--primary {
     background: #007AFF;
     border: 1px solid #007AFF;
-    color: #9B9B9B; }
+    color: #ffffff; }
   .btn--default {
     background: transparent;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -1219,7 +1220,7 @@ footer {
 body, html {
   background: #EFEFF4;
   -webkit-font-smoothing: subpixel-antialiased;
-  min-height: 100vh; }
+  min-height: 480px; }
 
 nav {
   width: 100%; }
