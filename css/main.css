@@ -1,40 +1,40 @@
-.ios {
+body {
   font-family: 'SF Pro Text';
   color: #030303;
   -webkit-font-smoothing: antialiased;
   padding: 0; }
-  .ios h1, .ios h2, .ios h3 {
+  body h1, body h2, body h3 {
     font-family: 'SF Pro Display';
     font-size: 28px;
     letter-spacing: .34px;
     word-spacing: .11px;
     font-weight: 500;
     color: #030303; }
-    .ios h1.title, .ios h2.title, .ios h3.title {
+    body h1.title, body h2.title, body h3.title {
       font-size: 34px;
       letter-spacing: .41px;
       word-spacing: .13px;
       font-weight: 600; }
-  .ios h2 {
+  body h2 {
     font-size: 22px;
     letter-spacing: .28px;
     word-spacing: .16px; }
-  .ios h3 {
+  body h3 {
     font-size: 20px;
     letter-spacing: .25px;
     word-spacing: .19px; }
-  .ios p, .ios label, .ios .text-value {
+  body p, body label, body .text-value {
     font: 17px "SF Pro Display";
     letter-spacing: .22px;
     line-height: 24px; }
-    .ios p.headline, .ios label.headline, .ios .headline.text-value {
+    body p.headline, body label.headline, body .headline.text-value {
       color: #9B9B9B;
       font-weight: 600; }
-  .ios footnote, .ios .text-sm {
+  body footnote, body .text-sm {
     font-size: 13px;
     letter-spacing: .13px;
     line-height: 14px; }
-  .ios label, .ios .text-value {
+  body label, body .text-value {
     margin-bottom: 0;
     line-height: 1; }
 
@@ -1226,7 +1226,7 @@ nav {
 
 .header-group {
   margin-bottom: 16px; }
-  .header-group h1, .header-group .ios h2, .ios .header-group h2, .header-group .ios h3, .ios .header-group h3 {
+  .header-group h1, .header-group body h2, body .header-group h2, .header-group body h3, body .header-group h3 {
     margin: 0; }
 
 body .container {

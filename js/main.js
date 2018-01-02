@@ -77,7 +77,10 @@ modalScroll = new IScroll('.modal-body', {
 		setTimeout(function () {
 	       myScroll = new IScroll('#modal-scroll', {
 	           mouseWheel: true,
-	           scrollbars: true
+	           scrollbars: 'custom',
+	           scrollbars: true,
+	           fadeScrollbars: true,
+	           preventDefaultException: { tagName:/.*/ }
 	       });
 	   }, 500);
 	   alert('i triggered');
