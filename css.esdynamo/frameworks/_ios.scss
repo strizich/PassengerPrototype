@@ -3,7 +3,8 @@
 body {
 	font-family: 'SF Pro Text';
 	color: $black;
-	-webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: subpixel-antialiased;
+
 	padding: 0;
 
 	

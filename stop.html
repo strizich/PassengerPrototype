@@ -44,8 +44,7 @@
 								<p class="headline">123456 Streetname Rd.</p>
 							</div>
 						</div>
-					</div>
-					
+					</div>	
 					<div class="container-fluid">
 							<div class="mast__map col-md-6 col-lg-8 ">
 								 <div id="map"></div>
@@ -73,7 +72,7 @@
 										</div>
 										<div class="cell cell--form-group">
 											<label class="form-control--input">
-												<span class="text text--primary">Date</span> <input type="datetime-local" value="12/27/2017" />
+												<span class="text text--primary">Date</span> <input type="date" />
 											</label>
 										</div>
 										<div class="cell cell--text">
@@ -86,7 +85,7 @@
 								</div>
 								<div class="module module--wide">
 									<div class="module__body--wide">
-										<div class="cell cell--clickable">
+										<div class="cell cell--clickable modal-trigger" data-toggle="modal" data-target="#myModal">
 											<div class="cell__group cell__group--align-left">
 												<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
 												<span class="text text--secondary text--available">Seats Available (2)</span>
@@ -114,11 +113,11 @@
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="footer__placeholder"></div>
 				</div>
+				<div class="footer__placeholder"></div>
 			</div>
     	</div>
+    	
     	<footer class="footer-nav">
     		<nav>
     			<div class="commuter ">
@@ -153,6 +152,106 @@
     			</div>
     		</nav>
     	</footer>
+    	<!-- Modal -->
+    	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    	  <div class="modal-dialog mobile--fullscreen" role="document">
+    	    <div class="modal-content">
+    	      <header class="scroll--locked">
+    	      	<nav>
+    	      		<a href="#" class="left" data-dismiss="modal" aria-label="Close">Back</a>
+    	      		<div class="header-group-stuck">
+    	      			<h1 class="title">Header 1</h1>
+    	      			<p class="headline">headline</p>
+    	      		</div>
+    	      		<a href="#" class="right">Right</a>
+    	      	</nav>
+    	      </header>
+    	      <div id="modal-scroll" class="modal-body">
+    	        	<div id="scroller">
+    	        		<div class="content">
+    	        			<div class="module module--full">
+    	        				<div class="module__body--full">
+    	        					<div class="cell cell--location">
+    	        						<div class="cell__label">
+    	        							<span class="text text--primary">From</span>
+    	        						</div>
+    	        						<div class="cell__group cell__group--align-right">
+    	        							<span class="text text--primary">Staples Center Parking Lot</span>
+    	        							<address class="text text--secondary">12345 Long Ass Streetname Rd.</address>
+    	        						</div>
+    	        					</div>
+    	        					<div class="cell cell--location">
+    	        						<div class="cell__label">
+    	        							<span class="text text--primary">To</span>
+    	        						</div>
+    	        						<div class="cell__group cell__group--align-right">
+    	        							<span class="text text--primary">Alias</span>
+    	        							<address class="text text--secondary">1234546</address>
+    	        						</div>
+    	        					</div>
+    	        				</div>
+    	        			</div>
+    		        		<div class="module__divider">
+    		        			<h4>Trip Details</h4>
+    		        		</div>
+    		        			<div class="module module--full">
+    		        				<div class="module__body--full">
+    		        					<div class="cell">
+    		        						<div class="cell__label">
+    		        							<span class="text text--primary">Time</span>
+    		        						</div>
+    		        						<div class="cell__group cell__group--align-right">
+    		        							<span class="text text--primary">12:35am</span>
+    		        						</div>
+    		        					</div>
+    		        					<div class="cell">
+    		        						<div class="cell__label">
+    		        							<span class="text text--primary">Date</span>
+    		        						</div>
+    		        						<div class="cell__group cell__group--align-right">
+    		        							<span class="text text--primary">Tomorrow, 01/11/2017</span>
+    		        						</div>
+    		        					</div>
+    		        				</div>
+    		        			</div>
+
+    		        		<div class="module__divider">
+    		        			<h4>Parking and Vehicles</h4>
+    		        		</div>
+    		        		<div class="module module--full">
+    		        			<div class="module__body--full">
+    		        				<div class="cell cell--form-group">
+    		        					<label class="form-control--switch">
+    		        						<input type="checkbox" checked /><span class="text text--primary">Reserve Parking</span>
+    		        					</label>
+    		        				</div>
+    		        				<div class="cell cell--form-input">
+    		        					<label class="form-control--input">
+    		        						<span class="text text--primary">Vehicle</span> 
+    		        						<select dir="rtl">
+    		        							<option>--</option>
+    		        							<option>One</option>
+    		        							<option>Two</option>
+    		        							<option>Three</option>
+    		        							<option>Four</option>
+    		        						</select>
+    		        					</label>
+    		        				</div>
+    		        				
+    		        			</div>
+    		        		</div>
+    		        		
+    	        		</div>
+    	        	</div>
+    	      </div>
+    	      <div class="modal-footer">
+    	        <button type="button" class="btn btn--lg btn--book">Next</button>
+    	      </div>
+    	    </div>
+    	  </div>
+    	</div>
+    	
+    	
 	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmP00t-jvASD2Yfs7G-i92Ypc71Pxchxw&callback=initMap"

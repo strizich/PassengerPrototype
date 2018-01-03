@@ -1,7 +1,7 @@
 body {
   font-family: 'SF Pro Text';
   color: #030303;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
   padding: 0; }
   body h1, body h2, body h3 {
     font-family: 'SF Pro Display';
@@ -546,15 +546,28 @@ body {
     width: 100%;
     padding-left: 16px;
     font: 17px "SF Pro Display";
-    text-align: right;
     padding: 0 16px 0 16px;
     background: url(../images/glyph/glyph-carot.svg) no-repeat center right transparent;
     border: none;
-    -webkit-appearance: none;
-    transition: background .3s ease-in-out; }
+    transition: background .3s ease-in-out;
+    text-indent: 2px;
+    text-decoration: none; }
     .form-control--input input:focus, .form-control--input select:focus {
       outline: none;
       background: url(../images/glyph/glyph-carot.svg) no-repeat 110% center transparent; }
+  .form-control--input input[type=date] {
+    text-align: right;
+    display: flex;
+    position: relative; }
+    .form-control--input input[type=date]::-webkit-inner-spin-button {
+      background: red;
+      display: none; }
+    .form-control--input input[type=date]::-webkit-calendar-picker-indicator {
+      display: none; }
+    .form-control--input input[type=date]:focus::-webkit-clear-button {
+      display: block; }
+    .form-control--input input[type=date]::-webkit-clear-button {
+      display: none; }
 
 .form-group--toggle {
   display: flex;
@@ -605,12 +618,18 @@ body {
   padding: 15px 16px;
   text-transform: uppercase;
   transition: all .22s;
-  width: 100%; }
+  font-size: 17px;
+  letter-spacing: 1px;
+  font-weight: normal;
+  border-radius: 12px; }
   .btn:focus {
-    outline: none; }
+    outline: none !important; }
   .btn--xs {
     padding: 4px 8px;
     font-size: 11px; }
+  .btn--block {
+    width: 100%;
+    padding: 15px 16px; }
   .btn--rounded {
     border-radius: 10.5px; }
   .btn--primary {
@@ -625,9 +644,14 @@ body {
       background: rgba(0, 0, 0, 0.1);
       outline: none; }
   .btn--book {
-    background: transparent;
+    background: #60AD06;
     border: 1px solid #60AD06;
-    color: #9B9B9B; }
+    color: #ffffff !important;
+    border-radius: 8px !important; }
+    .btn--book:active {
+      background: #539707;
+      color: #ffffff;
+      outline: none; }
 
 @media only screen and (max-width: 993px) {
   .ios .modal-backdrop.fade.in, .ios .modal-backdrop {
@@ -674,7 +698,7 @@ body {
       padding: 0;
       -webkit-overflow-scrolling: touch; }
       .mobile--fullscreen .modal-body .content {
-        padding: 80px 16px 8px; }
+        padding: 64px 16px 8px; }
     .mobile--fullscreen .modal-content {
       padding: 0;
       width: 100% !important;
@@ -692,7 +716,8 @@ body {
       display: flex;
       z-index: 100;
       background: rgba(255, 255, 255, 0.54);
-      -webkit-backdrop-filter: blur(20px); }
+      -webkit-backdrop-filter: blur(20px);
+      padding-bottom: env(safe-area-inset-bottom); }
       .mobile--fullscreen .modal-footer .btn {
         width: 100%;
         margin: 8px; } }
@@ -813,6 +838,12 @@ body {
   margin: 0 0 24px;
   position: relative;
   z-index: 2; }
+  .module__divider h4 {
+    font-size: 13px;
+    color: #6D6D72;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: normal; }
   .module--disabled .module__header--day {
     background-color: #EFEFF4;
     border: 0.5px solid rgba(0, 0, 0, 0.25);
@@ -977,7 +1008,7 @@ header {
 
 .scrolled header {
   transition: background .65s, opacity .65s, -webkit-backdrop-filter 0s;
-  background: rgba(255, 255, 255, 0.54);
+  background: rgba(255, 255, 255, 0.9);
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.12); }
   .scrolled header .header-group-stuck {
     opacity: 1; }
@@ -1008,7 +1039,7 @@ header {
 
 footer {
   display: flex;
-  position: absolute;
+  position: fixed;
   width: 100%;
   bottom: 0px;
   background-color: rgba(255, 255, 255, 0.9);

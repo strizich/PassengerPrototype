@@ -40,23 +40,23 @@ function loaded () {
 	    deceleration: 0.001,
 	    preventDefaultException: { tagName:/.*/ }  
 	});
-modalScroll = new IScroll('.modal-body', { 
-	probeType:  1,
-    mouseWheel: true,
-    scrollbars: 'custom',
-    bounce: true,
-    keyBindings: true,
-    invertWheelDirection: false,
-    momentum: true,
-    fadeScrollbars: true,
-    interactiveScrollbars: true,
-    resizeScrollbars: true,
-    shrinkScrollbars: false,
-    click: false,
-    preventDefaultException: { tagName:/.*/ }  
-});
-//	bodyScroll.on('scroll', updatePosition);
-//	bodyScroll.on('scrollEnd', updatePosition);
+	modalScroll = new IScroll('.modal-body', { 
+		probeType:  1,
+	    mouseWheel: true,
+	    scrollbars: 'custom',
+	    bounce: true,
+	    keyBindings: true,
+	    invertWheelDirection: false,
+	    momentum: true,
+	    fadeScrollbars: true,
+	    interactiveScrollbars: true,
+	    resizeScrollbars: true,
+	    shrinkScrollbars: false,
+	    click: false,
+	    preventDefaultException: { tagName:/.*/ }  
+	});
+	//	bodyScroll.on('scroll', updatePosition);
+	//	bodyScroll.on('scrollEnd', updatePosition);
 
 	bodyScroll.on('scroll', function () {
 	    if ( this.y <= -75 ) {

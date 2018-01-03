@@ -2,15 +2,24 @@
 	padding: 15px 16px;
 	text-transform: uppercase;
 	transition: all .22s;
-	width: 100%;
+	font-size: 17px;
+	letter-spacing: 1px;
+	font-weight: normal;
+	border-radius: 12px;
 	&:focus {
-		outline: none;
+		outline: none!important;
 	}
+	
 	
 	&--xs {
 		padding: 4px 8px;
 		font-size: 11px;
 	}
+	&--block {
+		width: 100%;
+		padding: 15px 16px;
+	}
+	
 	&--sm {
 		
 	}
@@ -25,6 +34,7 @@
 		background: $primary;
 		border: 1px solid $primary;
 		color: $white;
+		
 	}
 	&--default {
 		background: transparent;
@@ -36,9 +46,16 @@
 		}	
 	}
 	&--book {
-		background: transparent;
-		border: 1px solid $success;
-		color: #9B9B9B;
+		background: $book;
+		border: 1px solid $book;
+		color: $white!important;
+		border-radius: 8px!important;
+		&:active {
+			background: #539707;
+			color: $white;
+			outline: none;
+	
+		}
 	}
 	&--cancel {
 		

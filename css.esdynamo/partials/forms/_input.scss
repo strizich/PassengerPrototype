@@ -10,16 +10,40 @@
 		 width: 100%;
 		 padding-left: 16px;
 		 font: 17px "SF Pro Display";
-		 text-align: right;
 		 padding: 0 16px 0 16px;
 		 background: url(../images/glyph/glyph-carot.svg) no-repeat center right transparent;
 		 border: none;
-		 -webkit-appearance: none;
 		 transition: background .3s ease-in-out;
+		 text-indent: 2px;
+		text-decoration: none;
 		
 		&:focus {
 			outline: none;
 			background: url(../images/glyph/glyph-carot.svg) no-repeat 110%  center transparent;
 		}
+	}
+	input[type=date] {
+		 text-align: right;
+		 display: flex;
+		 position: relative;
+		 &::-webkit-inner-spin-button {
+		 	background: red;
+		 	display: none;
+		 }
+		 &::-webkit-calendar-picker-indicator {
+			display: none;
+		}
+		 &::-webkit-datetime-edit {
+		
+		}
+		&:focus {
+			&::-webkit-clear-button {
+				display: block;
+			}
+		}
+		&::-webkit-clear-button {
+			display: none;
+		}
+		
 	}
 }
