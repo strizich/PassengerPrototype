@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->  
     <head>
+        
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title></title>
@@ -22,10 +23,7 @@
 		<script src='js/iscroll-probe.js'></script>
     </head>
     <body class="ios" onload="loaded();">
-		<!--[if lt IE 7]>
-		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-		<![endif]-->
-		<header>
+		<header class="header__mobile hidden-md hidden-lg">
 			<nav>
 				<a href="#" class="left">Left</a>
 				<div class="header-group-stuck">
@@ -36,12 +34,29 @@
 			</nav>
 		</header>
 		
+		<header class="header__desktop hidden-sm hidden-xs">
+			<div class="header__branding">
+				<a class="header__logo" href="#">Logo</a>
+				<div class="header-group">
+					<h1 class="title">Header 1</h1>
+					<p class="headline">headline</p>
+				</div>
+			</div>
+			<nav>
+				<a href="#">Commuter</a>
+				<a href="#">On Demand</a>
+				<a href="#">Fixed Route</a>
+				<a href="#" class="menu">Menu</a>		
+				</div>
+			</nav>
+		</header>
+		
 		<div id="wrapper">
 			<div class="scroller">
 				<div class="header__placeholder"></div>	
 				<div class="content">
 					<div class="container-fluid">
-						<div class="header-group">
+						<div class="header-group hidden-md hidden-lg">
 							<h1 class="title">Header 1</h1>
 							<p class="headline">headline</p>
 						</div>
@@ -176,7 +191,7 @@
 				<div class="footer__placeholder"></div>	
 			</div>
     	</div>
-    	<footer class="footer-nav">
+    	<footer class="footer-nav hidden-md hidden-lg" >
     		<nav>
     			<div class="commuter active">
     				<a class="menu-trigger">
@@ -214,7 +229,27 @@
     	<!-- Button trigger modal -->
 
     	<!-- Modal -->
-    	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    	<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+    	  <div class="modal-dialog" role="document">
+    	    <div class="modal-content">
+    	      <div class="modal-header">
+    	        <h5 class="modal-title">Modal title</h5>
+    	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    	          <span aria-hidden="true">&times;</span>
+    	        </button>
+    	      </div>
+    	      <div class="modal-body">
+    	        <p>Modal body text goes here.</p>
+    	      </div>
+    	      <div class="modal-footer">
+    	        <button type="button" class="btn btn-primary">Save changes</button>
+    	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    	      </div>
+    	    </div>
+    	  </div>
+    	</div>
+    	
+   <!-- 	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     	  <div class="modal-dialog mobile--fullscreen" role="document">
     	    <div class="modal-content">
     	      <header class="scroll--locked">
@@ -442,7 +477,7 @@
     	      </div>
     	    </div>
     	  </div>
-    	</div>
+    	</div>-->
     	
 	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>

@@ -27,12 +27,12 @@
 				right: 0;
 				width:51px;
 				height:31px;
-				background-color:#fff;
-				vertical-align:-5px;
-				margin-right:16px;	
+				background-color: #fff;
+				vertical-align: -5px;
+				margin-right: 16px;	
 				border-radius: 40px;
 				top: calc(50% - 14.5px);
-				box-shadow:  inset 0px 0px 0px 0px #4CD964;
+				box-shadow: inset 0px 0px 0px 0px #4CD964;
 			}
 			&:after {
 				border: 1px solid rgba(0,0,0,0.10);
@@ -47,7 +47,6 @@
 				margin-right:17px;	
 				/* Knob: */
 				background: #FFFFFF;
-				
 				box-shadow: 0 3px 1px 0 rgba(0,0,0,.01), 0 2px 2px 0 rgba(0,0,0,0.15), 0 3px 3px 0 rgba(0,0,0,0.05);
 				border: 1px solid rgba(0,0,0,0.05);
 				
@@ -62,7 +61,6 @@
 		&:checked + span:before {
 			background: #fff;
 			border-radius: 30px;
-			
 			transform:translate3d(20px,0,0) ;
 			
 		}

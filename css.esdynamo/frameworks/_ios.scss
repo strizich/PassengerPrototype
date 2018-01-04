@@ -4,10 +4,8 @@ body {
 	font-family: 'SF Pro Text';
 	color: $black;
 	-webkit-font-smoothing: subpixel-antialiased;
-
 	padding: 0;
 
-	
 	h1 {
 		font-family: 'SF Pro Display';
 		font-size: 28px;
@@ -42,6 +40,7 @@ body {
 		&.headline {
 			color: $grey;
 			font-weight: 600;
+				margin-top: 0;
 		}
 	}
 	footnote {
@@ -117,12 +116,15 @@ body {
 	&--available {
 		color: $available;
 	}
+	&--na {
+		color: $light-grey;
+	}
 	&--link {
 		color: $primary;
 	}
 	
 	&--warning {
-		color:  $warning;
+		color: $warning;
 	}
 	&--waitlist {
 		color: $notice;

@@ -26,13 +26,18 @@
 //Desktop
 @media only screen and (min-width: 993px) {
 	.mast__map{
+		padding-bottom: 0px;
+		margin-bottom: 24px;
+		
 		&:after {
 			display: none;
+			
 		}
-			height: calc(90vh - 210px);
+			
 		#map {
 			height: 100%;
-			width: 100%;;
+			width: 100%;
+			
 		}
 	}
 }

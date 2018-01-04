@@ -12,24 +12,41 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
-		<link rel='stylesheet' href='css/main.css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">	
 		<link rel='stylesheet' href='css/normalize.min.css'>
-		<link rel='stylesheet' href='css/bootstrap-theme.css'>
-		<link rel='stylesheet' href='css/bootstrap.min.css'>
+		<link rel='stylesheet' href='css/main.css'>
 		<script src='js/vendor/modernizr-2.6.2.min.js'></script>
 		<script src='js/iscroll.js'></script>
 		<script src='js/iscroll-probe.js'></script>
     </head>
     <body class="ios" onload="loaded()">
-		<header>
+		
+		
+		<header class="header__mobile d-sm-block">
 			<nav>
 				<a href="#" class="left">Left</a>
 				<div class="header-group-stuck">
-					<h1 class="title">Kirkland Lot</h1>
-					<p class="headline">123456 Streetname Rd.</p>
+					<h1 class="title">Header 1</h1>
+					<p class="headline">headline</p>
 				</div>
 				<a href="#" class="right">Right</a>
+			</nav>
+		</header>
+		
+		<header class="header__desktop d-none d-lg-flex">
+			<div class="header__branding">
+				<a class="header__logo" href="#">Logo</a>
+				<div class="header-group">
+					<h1 class="title">Header 1</h1>
+					<p class="headline">headline</p>
+				</div>
+			</div>
+			<nav>
+				<a href="#">Commuter</a>
+				<a href="#">On Demand</a>
+				<a href="#">Fixed Route</a>
+				<a href="#" class="menu">Menu</a>		
+				</div>
 			</nav>
 		</header>
 		
@@ -37,76 +54,74 @@
 			<div class="scroller">
 				<div class="header__placeholder"></div>
 				<div class="content">
-					<div class="container-fluid">
-						<div class="col-sm-12">
-							<div class="header-group">
-								<h1 class="title">Kirkland Lot</h1>
-								<p class="headline">123456 Streetname Rd.</p>
-							</div>
+					<div class="header-group d-lg-none">
+							<h1 class="title">Kirkland Lot</h1>
+							<p class="headline">123456 Streetname Rd.</p>
 						</div>
-					</div>	
 					<div class="container-fluid">
-							<div class="mast__map col-md-6 col-lg-8 ">
-								 <div id="map"></div>
-							</div>
-							<div class="col-md-6 col-lg-4">
-								<div class="module module--full module--mast ">
-									<div class="module__body--full">
-										<div class="cell cell--form-group">
-											<div class="form-group--label">
-												<span class="text text--primary">Time of day</span>
-											</div>
-											<div class="form-group--toggle">
-												<label class="form-control--toggle">
-													<input type="radio" name="time-of-day"/><span class="text text--primary">Morning</span>
-												</label>
-												<label class="form-control--toggle">
-													<input type="radio" name="time-of-day"/><span class="text text--primary">Evening</span>
-												</label>
-											</div>
-										</div>
-										<div class="cell cell--form-group">
-											<label class="form-control--input">
-												<span class="text text--primary">Destination</span> <input type="text" value="Doppler"/>
-											</label>
-										</div>
-										<div class="cell cell--form-group">
-											<label class="form-control--input">
-												<span class="text text--primary">Date</span> <input type="date" />
-											</label>
-										</div>
-										<div class="cell cell--text">
-											<label class="form-control--input">
-												<span class="text text--primary">Parking</span> <span class="text text--primary text--available">Parking Available (12)</span>
-											</label>
-										</div>
-									</div>
-									
+							<div class="row">
+								<div class="mast__map col-lg-6">
+									 <div id="map"></div>
 								</div>
-								<div class="module module--wide">
-									<div class="module__body--wide">
-										<div class="cell cell--clickable modal-trigger" data-toggle="modal" data-target="#myModal">
-											<div class="cell__group cell__group--align-left">
-												<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
-												<span class="text text--secondary text--available">Seats Available (2)</span>
+								<div class="col-lg">
+									<div class="module module--full module--mast ">
+										<div class="module__body--full">
+											<div class="cell cell--form-group">
+												<div class="form-group--label">
+													<span class="text text--primary">Time of day</span>
+												</div>
+												<div class="form-group--toggle">
+													<label class="form-control--toggle">
+														<input type="radio" name="time-of-day"/><span class="text text--primary">Morning</span>
+													</label>
+													<label class="form-control--toggle">
+														<input type="radio" name="time-of-day"/><span class="text text--primary">Evening</span>
+													</label>
+												</div>
+											</div>
+											<div class="cell cell--form-group">
+												<label class="form-control--input">
+													<span class="text text--primary">Destination</span> <input type="text" value="Doppler" dir="rtl"/>
+												</label>
+											</div>
+											<div class="cell cell--form-group">
+												<label class="form-control--input">
+													<span class="text text--primary">Date</span> <input type="date" dir="rtl"/>
+												</label>
+											</div>
+											<div class="cell cell--text">
+												<label class="form-control--input">
+													<span class="text text--primary">Parking</span> <span class="text text--primary text--na">Parking Available (12)</span>
+												</label>
 											</div>
 										</div>
-										<div class="cell cell--clickable">
-											<div class="cell__group cell__group--align-left">
-												<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
-												<span class="text text--secondary text--available">Seats Available (12)</span>
+										
+									</div>
+									<div class="module module--wide">
+										<div class="module__body--wide">
+											<div class="cell cell--clickable modal-trigger" data-toggle="modal" data-target="#myModal">
+												<div class="cell__group cell__group--align-left">
+													<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
+													<span class="text text--secondary text--available">Seats Available (2)</span>
+												</div>
 											</div>
-										</div>
-										<div class="cell cell--clickable">
-											<div class="cell__group cell__group--align-left">
-												<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
-												<span class="text text--secondary text--available">Seats Available (12)</span>
+											<div class="cell cell--clickable">
+												<div class="cell__group cell__group--align-left">
+													<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
+													<span class="text text--secondary text--available">Seats Available (12)</span>
+												</div>
 											</div>
-										</div>
-										<div class="cell cell--clickable">
-											<div class="cell__group cell__group--align-left">
-												<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
-												<span class="text text--secondary text--available">Seats Available (12)</span>
+											<div class="cell cell--clickable">
+												<div class="cell__group cell__group--align-left">
+													<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
+													<span class="text text--secondary text--available">Seats Available (12)</span>
+												</div>
+											</div>
+											<div class="cell cell--clickable">
+												<div class="cell__group cell__group--align-left">
+													<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
+													<span class="text text--secondary text--available">Seats Available (12)</span>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -116,9 +131,9 @@
 				</div>
 				<div class="footer__placeholder"></div>
 			</div>
-    	</div>
+		</div>
     	
-    	<footer class="footer-nav">
+    	<footer class="footer-nav d-sm-block d-md-none">
     		<nav>
     			<div class="commuter ">
     				<a class="menu-trigger">
@@ -152,8 +167,7 @@
     			</div>
     		</nav>
     	</footer>
-    	<!-- Modal -->
-    	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     	  <div class="modal-dialog mobile--fullscreen" role="document">
     	    <div class="modal-content">
     	      <header class="scroll--locked">
@@ -166,9 +180,9 @@
     	      		<a href="#" class="right">Right</a>
     	      	</nav>
     	      </header>
-    	      <div id="modal-scroll" class="modal-body">
-    	        	<div id="scroller">
-    	        		<div class="content">
+    	      <div class="modal-body">
+    	        	<div id="wrapper">
+    	        		<div id="modal-scroll" class="scroller">
     	        			<div class="module module--full">
     	        				<div class="module__body--full">
     	        					<div class="cell cell--location">
@@ -214,32 +228,31 @@
     		        					</div>
     		        				</div>
     		        			</div>
-
-    		        		<div class="module__divider">
-    		        			<h4>Parking and Vehicles</h4>
-    		        		</div>
-    		        		<div class="module module--full">
-    		        			<div class="module__body--full">
-    		        				<div class="cell cell--form-group">
-    		        					<label class="form-control--switch">
-    		        						<input type="checkbox" checked /><span class="text text--primary">Reserve Parking</span>
-    		        					</label>
-    		        				</div>
-    		        				<div class="cell cell--form-input">
-    		        					<label class="form-control--input">
-    		        						<span class="text text--primary">Vehicle</span> 
-    		        						<select dir="rtl">
-    		        							<option>--</option>
-    		        							<option>One</option>
-    		        							<option>Two</option>
-    		        							<option>Three</option>
-    		        							<option>Four</option>
-    		        						</select>
-    		        					</label>
-    		        				</div>
-    		        				
-    		        			</div>
-    		        		</div>
+	    		        		<div class="module__divider">
+	    		        			<h4>Parking and Vehicles</h4>
+	    		        		</div>
+	    		        		<div class="module module--full">
+	    		        			<div class="module__body--full">
+	    		        				<div class="cell cell--form-group">
+	    		        					<label class="form-control--switch">
+	    		        						<input type="checkbox" checked /><span class="text text--primary">Reserve Parking</span>
+	    		        					</label>
+	    		        				</div>
+	    		        				<div class="cell cell--form-input">
+	    		        					<label class="form-control--input">
+	    		        						<span class="text text--primary">Vehicle</span> 
+	    		        						<select dir="rtl">
+	    		        							<option>--</option>
+	    		        							<option>One</option>
+	    		        							<option>Two</option>
+	    		        							<option>Three</option>
+	    		        							<option>Four</option>
+	    		        						</select>
+	    		        					</label>
+	    		        				</div>
+	    		        				
+	    		        			</div>
+	    		        		</div>
     		        		
     	        		</div>
     	        	</div>
@@ -252,11 +265,11 @@
     	</div>
     	
     	
-	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+	    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmP00t-jvASD2Yfs7G-i92Ypc71Pxchxw&callback=initMap"
 		  async defer></script>
-		<script src='js/vendor/bootstrap-3.1.1.min.js'></script>
 		<script src='js/main.js'></script>
 		<script>
 		      function initMap() {

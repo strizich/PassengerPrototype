@@ -1,4 +1,71 @@
-header {
+.header__desktop {
+	transition: all .6s;
+	position: fixed;
+	right: 0;
+	left: 0;
+	top: 0;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	background: rgb(239, 238, 243);
+	border-bottom:.5px solid rgba(0,0,0,0);
+	-webkit-backdrop-filter:blur(20px);
+	padding: 4px 16px;
+	nav{
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		margin-bottom: 0px;
+		z-index: 100;
+		a{
+			padding: 16px;
+		}
+	}
+	.header-group {
+		width: 100%;
+		margin-bottom: 0;
+		.title {
+			font-size: 17px;
+		}
+		
+		.headline {
+			margin-bottom: 0;
+			font-size: 14px;
+		}
+	}
+	.header__branding {
+		display: flex;
+		align-items: center;
+	}
+	
+	.header__logo {
+		width: 120px;
+		height: 60px;
+		background: pink;
+		display: block;
+		margin-right: 16px;
+	}
+	nav {
+		a{
+			&.menu {
+				background: url(../images/nav/tab-5-inactive.svg) no-repeat center;
+				text-indent: -10000px;
+			}
+		}
+	}
+}
+
+
+.scrolled {
+	.header__desktop {
+		background: rgba(255,255,255,.84);
+		transition: background .65s, opacity .65s, -webkit-backdrop-filter 0s;
+		border-bottom:.5px solid rgba(0,0,0,.12);	
+		-webkit-backdrop-filter:blur(10px)
+	}
+}
+
+.header__mobile {
 	transition: all .6s;
 	position: fixed;
 	right: 0;
@@ -19,12 +86,10 @@ header {
 		display: block;
 		background: rgba(0, 121, 255, 0.58);
 		position: fixed;
-		width: 100%;
-		
+		width: 100%;	
 	}
 	
 	nav{
-		font-family: "SF Pro Text";
 	    padding-top: 16px;
 	    padding-top: -safe-area-inset-top;
 		display: flex;
@@ -50,6 +115,7 @@ header {
 			}
 		}	
 	}
+	
 	.header-group {		
 		&-stuck {
 			opacity: 0;
@@ -72,6 +138,7 @@ header {
 			}
 		}
 	}
+	
 	.header-group-stuck {
 		align-self: flex-end;
 		opacity: 0;
@@ -87,18 +154,19 @@ header {
 }
 
 .scrolled {
-	header {
+	.header__mobile {
 		transition: background .65s, opacity .65s, -webkit-backdrop-filter 0s;
 		background: rgba(255,255,255,.9);
 		border-bottom:.5px solid rgba(0,0,0,.12);	
 		.header-group-stuck {
 			opacity: 1;
 		}
+		.header-group {
+			opacity: 0;
+			transition: all 1s;
+		}
 	}
-	.header-group {
-		opacity: 0;
-		transition: all 1s;
-	}
+	
 }
 
 .scroll--locked {
