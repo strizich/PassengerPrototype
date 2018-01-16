@@ -1,27 +1,7 @@
 var myScroll;
 var position;
 
-//function updatePosition () {
-//	position.innerHTML = this.y>>0;
-//	
-//}
-
 function loaded () {
-//Calender Scroller
-//calScroll = new IScroll('.cal__wrapper', { 
-//    mouseWheel: false,
-//    scrollbars: false,
-//    bounce: true,
-//    momentum: true,
-//    click: false,
-//    scrollX: true, 
-//    scrollY: false,
-//    snap:'.cal__week',
-//    preventDefaultException: { tagName:/.*/ }
-//});
-
-//Body Scroller
-//	position = document.getElementById('position');
 	snap = document.getElementById('snap');
 	
 	bodyScroll = new IScroll('#wrapper', { 
@@ -40,23 +20,6 @@ function loaded () {
 	    deceleration: 0.001,
 	    preventDefaultException: { tagName:/.*/ }  
 	});
-	modalScroll = new IScroll('.modal-body', { 
-		probeType:  1,
-	    mouseWheel: true,
-	    scrollbars: 'custom',
-	    bounce: true,
-	    keyBindings: true,
-	    invertWheelDirection: false,
-	    momentum: true,
-	    fadeScrollbars: true,
-	    interactiveScrollbars: true,
-	    resizeScrollbars: true,
-	    shrinkScrollbars: false,
-	    click: false,
-	    preventDefaultException: { tagName:/.*/ }  
-	});
-	//	bodyScroll.on('scroll', updatePosition);
-	//	bodyScroll.on('scrollEnd', updatePosition);
 
 	bodyScroll.on('scroll', function () {
 	    if ( this.y <= -75 ) {
@@ -73,43 +36,57 @@ function loaded () {
 	    	$('body').removeClass('scrollDown');
 	    }
 	});
-	
-	$('.modal-trigger').on('click', function(){
-		setTimeout(function () {
-	       myScroll = new IScroll('#modal-scroll', {
-	           mouseWheel: true,
-	           scrollbars: 'custom',
-	           scrollbars: true,
-	           fadeScrollbars: true,
-	           preventDefaultException: { tagName:/.*/ }
-	       });
-	   }, 500);
-	});
+
 	   
 }
 
-function mastLoaded() {
-//Mast scroller
-myScroll2 = new IScroll('#mast-wrapper', { 
-    mouseWheel: false,
-    scrollbars: false,
-    bounce: true,
-    momentum: true,
-    click: false,
-    scrollX: true, 
-    scrollY: false,
-    snap:'.carousel-scroll .item',
-    preventDefaultException: { tagName:/.*/ }
-});
 
-myScroll2.on('scrollEnd', function () {
-    console.log(this.currentPage);
-    if(this.pageX == 2){
-    console.log('tick');
+$(document).ready(function(){
+	$(".owl-carousel").owlCarousel({
+	margin: 16,
+    responsiveClass:true,
+    onDragged: callback,
+    onInitialize: callback,
+    responsive:{
+	    0:{
+	      	items:1,
+	      	nav:true,
+	      	loop:false
+	    },
+	    768:{
+	       	items:2,
+	       	nav:true,
+	       	loop:false
+	    },
+	    960:{
+	   	    items:3,
+	   	    nav:true,
+	   	    loop:false
+	    },
+	    1440:{
+            items:4,
+            nav:true,
+            loop:false
+	    }
     }
 });
-myScroll2.goToPage(1, 0, 1000);
-}
-
-
+    function callback(event) {
+        var pages = event.page.count;     // Number of pages
+        var currentPage = event.page.index; 
+        var bodyScroll = new IScroll('#wrapper');
+        if (currentPage == 0){
+          bodyScroll.scrollToElement('.cal__week--1', 8000);
+            console.log('okay');
+        } else if (currentPage == 1){
+        	bodyScroll.scrollToElement('.cal__week--2' , 8000);
+        }
+        else if (currentPage == 2){
+        	bodyScroll.scrollToElement('.cal__week--3' , 8000);
+        }
+        else if (currentPage == 3){
+        	bodyScroll.scrollToElement('.cal__week--4' , 8000);
+        }
+        
+    }
+});
 document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
