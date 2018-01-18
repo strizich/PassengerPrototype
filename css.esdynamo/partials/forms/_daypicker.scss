@@ -1,0 +1,76 @@
+.form-group--daypicker {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 369px;
+	margin-right: 32px;
+
+}
+
+.close--daypicker {
+	background: url(../images/glyph/glyph-close.svg) no-repeat center right;
+	text-indent: -10000px;
+	width: 32px;
+	height: 32px;
+	&:hover {
+		background: url(../images/glyph/glyph-close-black.svg) no-repeat center right;
+	}
+}
+
+.form-control--daypicker {
+	display: flex;
+	align-items: center;
+	position: relative;
+	justify-content: flex-start;
+	input[type="checkbox"]{
+		border: 0; 
+		clip: rect(0 0 0 0); 
+		height: 1px; margin: -1px; 
+		overflow: hidden; 
+		padding: 0; 
+		position: absolute; 
+		width: 1px;
+		& + span {
+			width: 32px;
+			height: 32px;
+			position: relative;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			small {
+				position: relative;
+				z-index: 1;
+				color: white;
+			}
+		}
+		
+		& + span:after{
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			z-index: 0;
+			content: '';
+			background-color: $grey;
+			z-index: 0;
+			border-radius: 30px;
+			transition: all .32s;
+		}
+		
+	
+		
+		&:checked + span:after {
+			background: $primary;
+		}
+		&:disabled + span:after {
+			background-color: rgba(0,0,0,.05);
+			color: $grey;
+		}
+	}
+	
+	&.is-focused {
+		
+	}
+}

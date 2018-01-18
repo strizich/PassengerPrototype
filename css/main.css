@@ -688,8 +688,8 @@ font-style: italic;
 	background: url(../images/glyph/glyph-carot.svg) no-repeat 110% center transparent;
 }
 
-.form-control--input .text--primary {
-	width: 100%;
+.form-control--input .text {
+	width: auto;
 }
 
 .form-control--input input[type=date] {
@@ -832,6 +832,82 @@ font-style: italic;
 	background: #539707;
 	color: #ffffff;
 	outline: none;
+}
+
+.form-group--daypicker {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 369px;
+	margin-right: 32px;
+}
+
+.close--daypicker {
+	background: url(../images/glyph/glyph-close.svg) no-repeat center right;
+	text-indent: -10000px;
+	width: 32px;
+	height: 32px;
+}
+
+.close--daypicker:hover {
+	background: url(../images/glyph/glyph-close-black.svg) no-repeat center right;
+}
+
+.form-control--daypicker {
+	display: flex;
+	align-items: center;
+	position: relative;
+	justify-content: flex-start;
+}
+
+.form-control--daypicker input[type="checkbox"] {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.form-control--daypicker input[type="checkbox"] + span {
+	width: 32px;
+	height: 32px;
+	position: relative;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.form-control--daypicker input[type="checkbox"] + span small {
+	position: relative;
+	z-index: 1;
+	color: white;
+}
+
+.form-control--daypicker input[type="checkbox"] + span:after {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 0;
+	content: '';
+	background-color: #9B9B9B;
+	z-index: 0;
+	border-radius: 30px;
+	transition: all .32s;
+}
+
+.form-control--daypicker input[type="checkbox"]:checked + span:after {
+	background: #007AFF;
+}
+
+.form-control--daypicker input[type="checkbox"]:disabled + span:after {
+	background-color: rgba(0, 0, 0, 0.05);
+	color: #9B9B9B;
 }
 
 @media only screen and (max-width: 993px) {
