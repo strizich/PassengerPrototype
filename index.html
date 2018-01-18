@@ -23,6 +23,7 @@
 		<script src='js/iscroll-probe.js'></script>
     </head>
     <body class="ios" onload="loaded();">
+		<div class="page-wrapper">
 		<header class="header__mobile hidden-md hidden-lg">
 			<nav>
 				<a href="#" class="left">Left</a>
@@ -226,28 +227,7 @@
     		</nav>
     	</footer>
     	
-    	<!-- Button trigger modal -->
-
-    	<!-- Modal -->
-    	<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
-    	  <div class="modal-dialog" role="document">
-    	    <div class="modal-content">
-    	      <div class="modal-header">
-    	        <h5 class="modal-title">Modal title</h5>
-    	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-    	          <span aria-hidden="true">&times;</span>
-    	        </button>
-    	      </div>
-    	      <div class="modal-body">
-    	        <p>Modal body text goes here.</p>
-    	      </div>
-    	      <div class="modal-footer">
-    	        <button type="button" class="btn btn-primary">Save changes</button>
-    	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-    	      </div>
-    	    </div>
-    	  </div>
-    	</div>
+   
     	
    <!-- 	<div class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     	  <div class="modal-dialog mobile--fullscreen" role="document">
@@ -478,11 +458,46 @@
     	    </div>
     	  </div>
     	</div>-->
-    	
+		</div>
+		 	<!-- Button trigger modal -->
+		
+		    	<!-- Modal -->
+		    	<div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+		    	  <div class="modal-dialog" role="document">
+		    	    <div class="modal-content">
+		    	      <div class="modal-header">
+		    	        <h5 class="modal-title">Modal title</h5>
+		    	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		    	          <span aria-hidden="true">&times;</span>
+		    	        </button>
+		    	      </div>
+		    	      <div class="modal-body">
+		    	        <p>Modal body text goes here.</p>
+		    	      </div>
+		    	      <div class="modal-footer">
+		    	        <button type="button" class="btn btn-primary">Save changes</button>
+		    	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		    	      </div>
+		    	    </div>
+		    	  </div>
+		    	</div>
 	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
 		<script src='js/vendor/bootstrap-3.1.1.min.js'></script>
-		<script src='js/main.js'></script>
+		 <script>
+		 	$(function() {
+		 	    //caches a jQuery object containing the header element
+		 	    var body = $(".page-wrapper");
+		 	    $('#wrapper').scroll(function() {
+		 	        var scroll = $('#wrapper').scrollTop();
+		 	        if (scroll >= 68) {
+		 	            body.removeClass('not-scrolled').addClass("scrolled");
+		 	        } else {
+		 	            body.removeClass("scrolled").addClass('not-scrolled');
+		 	        }
+		 	    });
+		 	});
+		 </script>
 	
     </body>
 </html>

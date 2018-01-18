@@ -24,10 +24,14 @@
 			background: url(../images/glyph/glyph-carot.svg) no-repeat 110%  center transparent;
 		}
 	}
+	.text{
+		width: 25%%;
+	}
 	input[type=date] {
 		 text-align: right;
 		 display: flex;
 		 position: relative;
+		 width: 100%;
 		 &::-webkit-inner-spin-button {
 		 	background: red;
 		 	display: none;

@@ -34,10 +34,32 @@ body .container {
 	padding: 0 16px;
 }
 
+#wrapper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+	max-height: 100vh;
+	padding-top: 16px;
+}
 
+#wrapper.owl-header{
+	top: 162px;
+}
+
+footer ~ #wrapper {
+	bottom: 44px;
+}
+
+/*.iscroll--on {
+	
 #wrapper, #modal-scroll{
 	position: relative;
-	z-index: 1;
+	z-index: 100;
 	top: 0;
 	bottom: 0;
 	left: 0;
@@ -68,7 +90,7 @@ body .container {
 	-o-text-size-adjust: none;
 	text-size-adjust: none;
 }
-
+}*/
 .content {
 	margin-top: env(safe-area-inset-top);
 	padding-left: env(safe-area-inset-left) ;
