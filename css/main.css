@@ -1399,7 +1399,7 @@ font-style: italic;
 }
 
 .scrolled .header__desktop {
-	background: rgba(255, 255, 255, 0.84);
+	background: rgba(255, 255, 255, 0.74);
 	transition: background .65s, opacity .65s, -webkit-backdrop-filter 0s;
 	border-bottom: 0.5px solid rgba(0, 0, 0, 0.12);
 	-webkit-backdrop-filter: blur(10px);
@@ -1545,7 +1545,7 @@ footer {
 	position: fixed;
 	width: 100%;
 	bottom: 0px;
-	background-color: rgba(255, 255, 255, 0.9);
+	background-color: rgba(255, 255, 255, 0.74);
 	-webkit-backdrop-filter: blur(10px);
 	padding-bottom: env(safe-area-inset-bottom);
 	padding-left: env(safe-area-inset-left);
@@ -1900,6 +1900,11 @@ body .container {
 
 footer ~ #wrapper {
 	bottom: 44px;
+}
+
+.content {
+	padding-top: 64px;
+	padding-bottom: 80px;
 }
 
 /*.iscroll--on {
