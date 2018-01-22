@@ -17,11 +17,11 @@
 	}
 	
 	&__group {	
-		width: 100%;
 		align-items: center;
 		&--options {
 			text-align: right;
 			flex-shrink: 1;
+			align-self: center;
 		}
 		
 		&--align-right {

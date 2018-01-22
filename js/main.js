@@ -9,9 +9,58 @@ $(function() {
             body.removeClass("scrolled").addClass('not-scrolled');
         }
     });
+	$('#top').on('click', function(){
+		$('#wrapper').animate({scrollTop:0 }, 300);
+	});
 });
 
 
+$('.module').css('background' , 'red');
+
+this.addEventListener("load", doSomething, true);
+
+var myElement = document.querySelector(".module"); 
+var position;
+
+function doSomething(e) {
+        
+    position = getPosition(myElement);
+    alert("The image is located at: " + position.x + ", " + position.y);
+}
+
+// deal with the page getting resized or scrolled
+window.addEventListener("scroll", updatePosition, false);
+window.addEventListener("resize", updatePosition, false);
+
+function updatePosition() {
+  position = getPosition(myElement);
+}
+
+// helper function to get an element's exact position
+function getPosition(el) {
+  var xPosition = 0;
+  var yPosition = 0;
+
+  while (el) {
+    if (el.tagName == "#wrapper") {
+      // deal with browser quirks with body/window/document and page scroll
+      var xScrollPos = el.scrollLeft || document.documentElement.scrollLeft;
+      var yScrollPos = el.scrollTop || document.documentElement.scrollTop;
+
+      xPosition += (el.offsetLeft - xScrollPos + el.clientLeft);
+      yPosition += (el.offsetTop - yScrollPos + el.clientTop);
+    } else {
+      xPosition += (el.offsetLeft - el.scrollLeft + el.clientLeft);
+      yPosition += (el.offsetTop - el.scrollTop + el.clientTop);
+    }
+
+    el = el.offsetParent;
+  }
+  return {
+    x: xPosition,
+    y: yPosition
+  };
+}
 
 //var myScroll;
 //var position;
@@ -58,30 +107,27 @@ $(function() {
 
 $(document).ready(function(){
 	$(".owl-carousel").owlCarousel({
-	margin: 16,
+
     responsiveClass:true,
-    onDragged: callback,
-    onInitialize: callback,
+//    onDragged: callback,
+//    onInitialize: callback,
+	nav:true,
+	loop:false,
     responsive:{
 	    0:{
 	      	items:1,
-	      	nav:true,
-	      	loop:false
+	     
 	    },
 	    768:{
 	       	items:2,
-	       	nav:true,
-	       	loop:false
+
 	    },
-	    960:{
+	    992:{
 	   	    items:3,
-	   	    nav:true,
-	   	    loop:false
+
 	    },
 	    1440:{
-            items:4,
-            nav:true,
-            loop:false
+            items:4
 	    }
     }
 });

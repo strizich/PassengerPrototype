@@ -7,7 +7,7 @@
 	z-index: 10;
 	display: flex;
 	align-items: center;
-	background: rgb(239, 238, 243);
+
 	border-bottom:.5px solid rgba(0,0,0,0);
 	-webkit-backdrop-filter:blur(20px);
 	padding: 4px 16px;
@@ -75,7 +75,6 @@
 	min-height: 64px;
 	display: flex;
 	align-items: flex-end;
-	background: rgb(239, 238, 243);
 	border-bottom:.5px solid rgba(0,0,0,0);
 	-webkit-backdrop-filter:blur(20px);
 	padding-top: env(safe-area-inset-top);
@@ -156,7 +155,7 @@
 .scrolled {
 	.header__mobile {
 		transition: background .65s, opacity .65s, -webkit-backdrop-filter 0s;
-		background: rgba(255,255,255,.9);
+		background: rgba(255,255,255,.0)!important;
 		border-bottom:.5px solid rgba(0,0,0,.12);	
 		.header-group-stuck {
 			opacity: 1;
