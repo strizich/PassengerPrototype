@@ -14,53 +14,53 @@ $(function() {
 	});
 });
 
-
-$('.module').css('background' , 'red');
-
-this.addEventListener("load", doSomething, true);
-
-var myElement = document.querySelector(".module"); 
-var position;
-
-function doSomething(e) {
-        
-    position = getPosition(myElement);
-    alert("The image is located at: " + position.x + ", " + position.y);
-}
-
+//
+//$('.module').css('background' , 'red');
+//
+//this.addEventListener("load", doSomething, true);
+//
+//var myElement = document.querySelector(".module"); 
+//var position;
+//
+//function doSomething(e) {
+//        
+//    position = getPosition(myElement);
+//    alert("The image is located at: " + position.x + ", " + position.y);
+//}
+//
 // deal with the page getting resized or scrolled
-window.addEventListener("scroll", updatePosition, false);
-window.addEventListener("resize", updatePosition, false);
-
-function updatePosition() {
-  position = getPosition(myElement);
-}
-
+//window.addEventListener("scroll", updatePosition, false);
+//window.addEventListener("resize", updatePosition, false);
+//
+//function updatePosition() {
+//  position = getPosition(myElement);
+//}
+//
 // helper function to get an element's exact position
-function getPosition(el) {
-  var xPosition = 0;
-  var yPosition = 0;
-
-  while (el) {
-    if (el.tagName == "#wrapper") {
-      // deal with browser quirks with body/window/document and page scroll
-      var xScrollPos = el.scrollLeft || document.documentElement.scrollLeft;
-      var yScrollPos = el.scrollTop || document.documentElement.scrollTop;
-
-      xPosition += (el.offsetLeft - xScrollPos + el.clientLeft);
-      yPosition += (el.offsetTop - yScrollPos + el.clientTop);
-    } else {
-      xPosition += (el.offsetLeft - el.scrollLeft + el.clientLeft);
-      yPosition += (el.offsetTop - el.scrollTop + el.clientTop);
-    }
-
-    el = el.offsetParent;
-  }
-  return {
-    x: xPosition,
-    y: yPosition
-  };
-}
+//function getPosition(el) {
+//  var xPosition = 0;
+//  var yPosition = 0;
+//
+//  while (el) {
+//    if (el.tagName == "#wrapper") {
+//      // deal with browser quirks with body/window/document and page scroll
+//      var xScrollPos = el.scrollLeft || document.documentElement.scrollLeft;
+//      var yScrollPos = el.scrollTop || document.documentElement.scrollTop;
+//
+//      xPosition += (el.offsetLeft - xScrollPos + el.clientLeft);
+//      yPosition += (el.offsetTop - yScrollPos + el.clientTop);
+//    } else {
+//      xPosition += (el.offsetLeft - el.scrollLeft + el.clientLeft);
+//      yPosition += (el.offsetTop - el.scrollTop + el.clientTop);
+//    }
+//
+//    el = el.offsetParent;
+//  }
+//  return {
+//    x: xPosition,
+//    y: yPosition
+//  };
+//}
 
 //var myScroll;
 //var position;
@@ -112,6 +112,7 @@ $(document).ready(function(){
 //    onDragged: callback,
 //    onInitialize: callback,
 	nav:true,
+	navText:['',''],
 	loop:false,
     responsive:{
 	    0:{

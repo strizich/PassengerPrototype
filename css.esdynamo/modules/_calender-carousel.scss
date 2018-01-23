@@ -6,13 +6,14 @@
 	}
 	&-stage {
 		position: relative;
+		padding-bottom: 16px;
 	}
 	&-dots{
 		display: flex;
 		justify-content: center;
 		bottom: 8px;
-		position: relative;
-		margin-top: 16px;
+		position: absolute;
+		width: 100%;
 		.owl-dot {
 			width: 6px;
 			height: 6px;
@@ -34,6 +35,7 @@
 		height: 100%;
 		background: url(../images/glyph/glyph-carot.svg) no-repeat center center;
 		transition: opacity 1s ease-in-out 0s;
+		width: 16px;
 		&.disabled {
 			opacity: .1;
 		}
@@ -45,6 +47,7 @@
 		top: 0;
 		background: url(../images/glyph/glyph-carot-left.svg) no-repeat center center;
 		transition: opacity 1s ease-in-out 0s;
+		width: 16px;
 		&.disabled {
 			opacity: .1;
 		}
