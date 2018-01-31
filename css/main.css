@@ -1573,7 +1573,7 @@ font-style: italic;
 
 .scrolled .header__mobile {
 	transition: background .65s, opacity .65s, -webkit-backdrop-filter 0s;
-	background: rgba(255, 255, 255, 0) !important;
+	background: rgba(255, 255, 255, 0.8) !important;
 	border-bottom: 0.5px solid rgba(0, 0, 0, 0.12);
 }
 
@@ -2116,4 +2116,10 @@ footer ~ #wrapper {
 	background: rgba(0, 0, 0, 0.25);
 	width: 4px;
 	border-radius: 30px;
+}
+
+@media only screen and (min-width: 993px) {
+	.content {
+		padding-top: 88px;
+	}
 }

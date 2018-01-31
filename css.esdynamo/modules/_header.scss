@@ -220,7 +220,7 @@
 .scrolled {
 	.header__mobile {
 		transition: background .65s, opacity .65s, -webkit-backdrop-filter 0s;
-		background: rgba(255,255,255,.0)!important;
+		background: rgba(255,255,255,.8)!important;
 		border-bottom:.5px solid rgba(0,0,0,.12);	
 		.header-group-stuck {
 			opacity: 1;

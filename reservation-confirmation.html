@@ -1,238 +1,547 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+<![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8">
+<![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9">
+<![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title></title>
-        <meta name="description" content="">
-        <meta name='viewport' content='initial-scale=1, viewport-fit=cover, width=device-width'>
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->		
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">	
-		<link rel='stylesheet' href='css/owl.carousel.min.css'>
-		<link rel='stylesheet' href='css/main.css'>
-		<script src='js/vendor/modernizr-2.6.2.min.js'></script>
-    </head>
-    <body>
-		<div class="page-wrapper">
-			<header class="header__mobile d-sm-block">
-				<nav>
-					<a href="#" class="left">Left</a>
-					<div class="header-group-stuck">
-						<h1 class="title">Header 1</h1>
-						<p class="headline">headline</p>
-					</div>
-					<a href="#" class="right">Right</a>
-				</nav>
-			</header>
-			
-			<header class="header__desktop d-none d-lg-flex">
-				<div class="header__branding">
-					<a class="header__logo" href="#">Logo</a>
-					<div class="header-group">
-						<h1 class="title">Header 1</h1>
-						<p class="headline">headline</p>
-					</div>
-				</div>
-				<nav>
-					<a href="#" class="link--commuter active">Commuter</a>
-					<a href="#" class="link--drt">On Demand</a>
-					<a href="#" class="link--fixed">Fixed Route</a>
-					<a href="#" class="link--fixed">My Trips</a>
-					<div class="dropdown">
-						<button class="link--menu" data-toggle="dropdown">Menu</button>
-						<div class="dropdown-menu">
-						    <a class="dropdown-item" href="#">Home</a>
-						    <a class="dropdown-item" href="#">Published Schedules</a>
-						   
-							<div class="dropdown-divider"></div>
-							
-							<a class="dropdown-item" href="#">Notifications</a>
-							<a class="dropdown-item" href="#">Contacts and Feedback</a>
-							<a class="dropdown-item" href="#">Settings</a>
-							<a class="dropdown-item" href="#">Privacy</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Logout</a>
-						</div>
-					</div>	
-					</div>
-				</nav>
-			</header>
-
-			<div id="wrapper">
-				<div class="content">
-					<div class="container-fluid">
-						<!--Display the from and to location-->
-						<div class="module module--full">
-							<div class="cell cell--text-group">
-								<div class="cell__label">
-									<span class="text text--primary">From</span>
-								</div>
-								<div class="cell__group cell__group--align-left">
-									<span class="text text--primary">Alias</span>
-									<address class="text text--secondary">1234546</address>
-								</div>
-							</div>
-							<div class="cell cell--text-group">
-								<div class="cell__label">
-									<span class="text text--primary">To</span>
-								</div>
-								<div class="cell__group cell__group--align-left">
-									<span class="text text--primary">Alias</span>
-									<address class="text text--secondary">1234546</address>
-								</div>
-							</div>
-						</div>
-						
-						
-						<!--Snapshot view of the user's selected reservations-->
-						
-						<div id="top" class="week__group week__group--1 row">
-							
-							<div class="module__group col-md-6 col-lg-4 col-xl">
-								<div class="module__divider">
-									<h4>Section</h4>
-								</div>
-								<div class="module module--wide">
-									<div class="module__body--wide">
-										<div class="cell">
-										<div class="cell__group">
-											<div class="text-group">
-												<span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span> 
-											</div>
-											
-										</div>
-										<div class="cell__group cell__group--align-right">
-											<div class="text-group">
-												<span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span>
-											</div>
-										</div>
-										</div>
-									</div>
-									<!--<div class="module__body module__body--wide">
-										<div class="cell">
-											<label class="form-group--radio">
-												<div class="form-control--radio">
-													<input type="radio" name="monday"/>
-													<span></span>
-												</div>
-												<div class="cell__group">
-													<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
-													<span class="text text--secondary text--available">Seats Available (2)</span>									
-												</div>
-											</label>
-										</div>
-										<div class="cell">
-											<label class="form-group--radio">
-												<div class="form-control--radio">
-													<input type="radio" name="monday"/>
-													<span></span>
-												</div>
-												<div class="cell__group">
-													<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
-													<span class="text text--secondary text--available">Seats Available (2)</span>									
-												</div>
-											</label>
-										</div>
-										<div class="cell">
-											<label class="form-group--radio">
-												<div class="form-control--radio">
-													<input type="radio" name="monday"/>
-													<span></span>
-												</div>
-												<div class="cell__group">
-													<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
-													<span class="text text--secondary text--available">Seats Available (2)</span>									
-												</div>
-											</label>
-										</div>
-										<div class="cell">
-											<label class="form-group--radio">
-												<div class="form-control--radio">
-													<input type="radio" name="monday"/>
-													<span></span>
-												</div>
-												<div class="cell__group">
-													<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
-													<span class="text text--secondary text--available">Seats Available (2)</span>									
-												</div>
-											</label>
-										</div>
-										<div class="cell">
-											<label class="form-group--radio">
-												<div class="form-control--radio">
-													<input type="radio" name="monday"/>
-													<span></span>
-												</div>
-												<div class="cell__group">
-													<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span> </div>								
-													<span class="text text--secondary text--available">Seats Available (2)</span>									
-												</div>
-											</label>
-										</div>
-									</div>-->
-									<div class="module__footer">
-										<div class="cell">
-											<div class="cell__group">
-												<div class="cell__group cell__group--list">
-													<span class="text text--secondary text--available">Parking Available</span>
-												</div>
-											</div>
-											<div class="cell__group cell__group--align-right cell__group--list">
-												<span class="text text--secondary text--muted" href="">Wife's Car</span>
-											</div>
-										</div>
-									</div>
-								</div>			 
-							</div>
-					</div>
-				</div>
-			</div>
+	<meta charset="utf-8">
 	
-	    	<footer class="footer-nav">
-	    		<nav>
-	    			<div class="commuter ">
-	    				<a class="menu-trigger">
-	    					<span class="tab-icon"></span>
-	    					<span class="tab-title">Commuter</span>
-	    				</a>
-	    			</div>
-	    			<div class="demand active">
-	    				<a class="menu-trigger ">
-	    					<span class="tab-icon"></span>
-	    					<span class="tab-title">Demand</span>
-	    				</a>	
-	    			</div>
-	    			<div class="fixed">
-	    				<a class="menu-trigger">
-	    					<span class="tab-icon"></span>
-	    					<span class="tab-title">Fixed</span>
-	    				</a>	
-	    			</div>
-	    			<div class="trips">
-	    				<a class="menu-trigger">
-	    					<span class="tab-icon"></span>
-	    					<span class="tab-title">My Trips</span>
-	    				</a>		
-	    			</div>
-	    			<div class="menu">
-	    				<a class="menu-trigger">
-	    					<span class="tab-icon"></span>
-	    					<span class="tab-title">Menu</span>
-	    				</a>		
-	    			</div>
-	    		</nav>
-	    	</footer>
-		</div>
-	    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title></title>
+	
+	<meta name="description" content="">
+	
+	<meta name='viewport' content='initial-scale=1, viewport-fit=cover, width=device-width'>
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->		
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+	
+	<link rel='stylesheet' href='css/owl.carousel.min.css'>
+	
+	<link rel='stylesheet' href='css/main.css'>
+	<script src='js/vendor/modernizr-2.6.2.min.js'></script>
+    </head>
+<body>
+	<div class="page-wrapper">
+		<header class="header__mobile">
+			<nav><a href="#" class="left">Left</a>
+				<div class="header-group-stuck">
+					<h1 class="title">Header 1</h1>
+					
+					<p class="headline">headline</p>
+				</div>
+				<a href="#" class="right">Right</a></nav>
+		</header>
+		
+		<header class="header__desktop d-none d-lg-flex">
+			<div class="header__branding"><a class="header__logo" href="#">Logo</a>
+				
+				<div class="header-group">
+					<h1 class="title">Header 1</h1>
+					
+					<p class="headline">headline</p>
+				</div>
+			</div>	
+			<nav><a href="#" class="link--commuter active">Commuter</a>
+				<a href="#" class="link--drt">On Demand</a>
+				<a href="#" class="link--fixed">Fixed Route</a>
+				<a href="#" class="link--fixed">My Trips</a>
+				
+				<div class="dropdown">
+					<button class="link--menu" data-toggle="dropdown">Menu</button>
+					
+					<div class="dropdown-menu"><a class="dropdown-item" href="#">Home</a>
+					    <a class="dropdown-item" href="#">Published Schedules</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Notifications</a>
+						<a class="dropdown-item" href="#">Contacts and Feedback</a>
+						<a class="dropdown-item" href="#">Settings</a>
+						<a class="dropdown-item" href="#">Privacy</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Logout</a></div>
+				</div>
+				</div>
+			</nav>
+		</header>
+		
+		<div id="wrapper">
+			<div class="content">
+				<div class="container">
+					<!--Display the from and to location-->
+					<div class="row">
+						<div class="col">
+							<div class="module module--full">
+								<div class="module__body--full">
+									<div class="cell cell--text-group">
+										<div class="cell__label"><span class="text text--primary">From</span></div>
+										
+										<div class="cell__group cell__group--align-right"><span class="text text--primary">Alias</span>
+											
+											<address class="text text--secondary">1234546</address>
+										</div>
+									</div>
+									
+									<div class="cell cell--text-group">
+										<div class="cell__label"><span class="text text--primary">To</span></div>
+										
+										<div class="cell__group cell__group--align-right"><span class="text text--primary">Alias</span>
+											
+											<address class="text text--secondary">1234546</address>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+					<!--Snapshot view of the user's selected reservations-->
+				<div class="container">
+					<div class="row">
+						<div class="module__group col-md-6 col-sm-12">
+							<div class="module__divider">
+								<h4>Section</h4>
+							</div>
+							<div class="module module--wide">
+								<div class="module__body--wide">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="text-group"><span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span></div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="module__footer">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="cell__group cell__group--list"><span class="text text--secondary text--available">Parking Available</span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right cell__group--list"><span class="text text--secondary text--muted" href="">Wife's Car</span></div>
+									</div>
+								</div>
+							</div>
+							<div class="module module--wide">
+								<div class="module__body--wide">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="text-group"><span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span></div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="module__footer">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="cell__group cell__group--list"><span class="text text--secondary text--available">Parking Available</span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right cell__group--list"><span class="text text--secondary text--muted" href="">Wife's Car</span></div>
+									</div>
+								</div>
+							</div>
+							<div class="module module--wide">
+								<div class="module__body--wide">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="text-group"><span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span></div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="module__footer">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="cell__group cell__group--list"><span class="text text--secondary text--available">Parking Available</span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right cell__group--list"><span class="text text--secondary text--muted" href="">Wife's Car</span></div>
+									</div>
+								</div>
+							</div>
+							<div class="module module--wide">
+								<div class="module__body--wide">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="text-group"><span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span></div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="module__footer">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="cell__group cell__group--list"><span class="text text--secondary text--available">Parking Available</span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right cell__group--list"><span class="text text--secondary text--muted" href="">Wife's Car</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="module__group col-md-6 col-sm-12">
+							<div class="module__divider">
+								<h4>Section</h4>
+							</div>
+							
+							<div class="module module--wide">
+								<div class="module__body--wide">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="text-group"><span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span></div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="module__footer">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="cell__group cell__group--list"><span class="text text--secondary text--available">Parking Available</span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right cell__group--list"><span class="text text--secondary text--muted" href="">Wife's Car</span></div>
+									</div>
+								</div>
+							</div>
+							<div class="module module--wide">
+								<div class="module__body--wide">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="text-group"><span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span></div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="module__footer">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="cell__group cell__group--list"><span class="text text--secondary text--available">Parking Available</span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right cell__group--list"><span class="text text--secondary text--muted" href="">Wife's Car</span></div>
+									</div>
+								</div>
+							</div>
+							<div class="module module--wide">
+								<div class="module__body--wide">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="text-group"><span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span></div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="module__footer">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="cell__group cell__group--list"><span class="text text--secondary text--available">Parking Available</span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right cell__group--list"><span class="text text--secondary text--muted" href="">Wife's Car</span></div>
+									</div>
+								</div>
+							</div>
+							<div class="module module--wide">
+								<div class="module__body--wide">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="text-group"><span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span></div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="module__footer">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="cell__group cell__group--list"><span class="text text--secondary text--available">Parking Available</span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right cell__group--list"><span class="text text--secondary text--muted" href="">Wife's Car</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="module__group col-md-6 col-sm-12">
+							<div class="module__divider">
+								<h4>Section</h4>
+							</div>
+							
+							<div class="module module--wide">
+								<div class="module__body--wide">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="text-group"><span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span></div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="module__footer">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="cell__group cell__group--list"><span class="text text--secondary text--available">Parking Available</span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right cell__group--list"><span class="text text--secondary text--muted" href="">Wife's Car</span></div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="module module--wide">
+								<div class="module__body--wide">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="text-group"><span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span></div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="module__footer">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="cell__group cell__group--list"><span class="text text--secondary text--available">Parking Available</span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right cell__group--list"><span class="text text--secondary text--muted" href="">Wife's Car</span></div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="module module--wide">
+								<div class="module__body--wide">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="text-group"><span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span></div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="module__footer">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="cell__group cell__group--list"><span class="text text--secondary text--available">Parking Available</span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right cell__group--list"><span class="text text--secondary text--muted" href="">Wife's Car</span></div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="module module--wide">
+								<div class="module__body--wide">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="text-group"><span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span></div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="module__footer">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="cell__group cell__group--list"><span class="text text--secondary text--available">Parking Available</span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right cell__group--list"><span class="text text--secondary text--muted" href="">Wife's Car</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="module__group col-md-6 col-sm-12">
+							<div class="module__divider">
+								<h4>Section</h4>
+							</div>
+							<div class="module module--wide">
+								<div class="module__body--wide">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="text-group"><span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span></div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="module__footer">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="cell__group cell__group--list"><span class="text text--secondary text--available">Parking Available</span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right cell__group--list"><span class="text text--secondary text--muted" href="">Wife's Car</span></div>
+									</div>
+								</div>
+							</div>
+							<div class="module module--wide">
+								<div class="module__body--wide">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="text-group"><span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span></div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="module__footer">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="cell__group cell__group--list"><span class="text text--secondary text--available">Parking Available</span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right cell__group--list"><span class="text text--secondary text--muted" href="">Wife's Car</span></div>
+									</div>
+								</div>
+							</div>
+							<div class="module module--wide">
+								<div class="module__body--wide">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="text-group"><span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span></div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="module__footer">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="cell__group cell__group--list"><span class="text text--secondary text--available">Parking Available</span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right cell__group--list"><span class="text text--secondary text--muted" href="">Wife's Car</span></div>
+									</div>
+								</div>
+							</div>
+							<div class="module module--wide">
+								<div class="module__body--wide">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="text-group"><span class="text text--headline">Monday <small class="text text--caption">12/25/2017</small></span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right">
+											<div class="text-group"><span class="text text__time--from">12:35am</span> <span class="text text__time--to">1:35am</span></div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="module__footer">
+									<div class="cell">
+										<div class="cell__group">
+											<div class="cell__group cell__group--list"><span class="text text--secondary text--available">Parking Available</span></div>
+										</div>
+										
+										<div class="cell__group cell__group--align-right cell__group--list"><span class="text text--secondary text--muted" href="">Wife's Car</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!--end container-->
+			</div><!--end main content-->
+		</div><!--end content wrapper-->
+
+    	<footer class="footer-nav">
+			<nav>
+				<div class="commuter "><a class="menu-trigger">
+					<span class="tab-icon"></span>
+					<span class="tab-title">Commuter</span>
+				</a></div>
+				
+				<div class="demand active"><a class="menu-trigger ">
+					<span class="tab-icon"></span>
+					<span class="tab-title">Demand</span>
+				</a></div>
+				
+				<div class="fixed"><a class="menu-trigger">
+					<span class="tab-icon"></span>
+					<span class="tab-title">Fixed</span>
+				</a></div>
+				
+				<div class="trips"><a class="menu-trigger">
+					<span class="tab-icon"></span>
+					<span class="tab-title">My Trips</span>
+				</a></div>
+				
+				<div class="menu"><a class="menu-trigger">
+					<span class="tab-icon"></span>
+					<span class="tab-title">Menu</span>
+				</a></div>
+			</nav>
+		</footer>
+	</div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
-		  <script src='js/owl.carousel.min.js'></script>
-		<script src='js/bootstrap.bundle.min.js'></script>
-		<script src='js/main.js'></script>
+	  <script src='js/owl.carousel.min.js'></script>
+	<script src='js/bootstrap.bundle.min.js'></script>
+	<script src='js/main.js'></script>
 
     </body>
 </html>
