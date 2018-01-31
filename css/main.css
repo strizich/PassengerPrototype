@@ -1340,10 +1340,6 @@ font-style: italic;
 	}
 }
 
-.week__group {
-	align-items: flex-start;
-}
-
 .header__desktop {
 	transition: all .6s;
 	position: fixed;
@@ -1367,14 +1363,21 @@ font-style: italic;
 }
 
 .header__desktop nav a {
-	padding: 16px;
 	color: #000;
 	font-size: 14px;
 	font-weight: 600;
 }
 
+.header__desktop nav a.dropdown-item {
+	font-weight: 300;
+}
+
 .header__desktop nav a:hover {
 	text-decoration: none;
+}
+
+.header__desktop nav a.link--commuter {
+	padding: 16px;
 }
 
 .header__desktop nav a.link--commuter.active {
@@ -1386,6 +1389,10 @@ font-style: italic;
 	color: #C32AFF;
 }
 
+.header__desktop nav a.link--fixed {
+	padding: 16px;
+}
+
 .header__desktop nav a.link--fixed.active {
 	box-shadow: 0px 3px 0px #F76B1C;
 	color: #F76B1C;
@@ -1393,6 +1400,10 @@ font-style: italic;
 
 .header__desktop nav a.link--fixed:hover {
 	color: #F76B1C;
+}
+
+.header__desktop nav a.link--drt {
+	padding: 16px;
 }
 
 .header__desktop nav a.link--drt.active {
@@ -1404,27 +1415,29 @@ font-style: italic;
 	color: #4A90E2;
 }
 
-.header__desktop nav a.link--menu {
+.header__desktop nav .link--menu {
 	background: url(../images/nav/tab-5-inactive.svg) no-repeat center;
 	text-indent: -10000px;
 	padding: 0;
 	width: 34px;
 	height: 34px;
 	transition: all .22s ease-in-out;
+	border: none;
 }
 
-.header__desktop nav a.link--menu:hover {
+.header__desktop nav .link--menu:hover {
 	background-color: #fff;
 	border-radius: 3px;
 	box-shadow: 0px 5px 10px -5px #444;
 	transition: all .22s ease-in-out;
 }
 
-.header__desktop nav a.link--menu:active {
+.header__desktop nav .link--menu:active, .header__desktop nav .link--menu:focus {
 	background-color: #fff;
 	border-radius: 3px;
 	box-shadow: 0px 0px 0px 0px #444;
 	transition: all .05s ease-in-out;
+	outline: none;
 }
 
 .header__desktop .header-group {

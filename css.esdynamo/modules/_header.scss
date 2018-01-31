@@ -17,14 +17,17 @@
 		margin-bottom: 0px;
 		z-index: 100;
 		a{
-			padding: 16px;
 			color: #000;
 			font-size: 14px;
 			font-weight: 600;
+			&.dropdown-item {
+				font-weight: 300;
+			}
 			&:hover {
 				text-decoration: none;
 			}
 			&.link--commuter {
+				padding: 16px;
 				&.active {
 					box-shadow: 0px 3px 0px $purple2;
 					color: $purple2;
@@ -35,6 +38,7 @@
 				}
 			}
 			&.link--fixed {
+				padding: 16px;
 				&.active {
 					box-shadow: 0px 3px 0px $orange2;
 					color: $orange2;
@@ -45,6 +49,8 @@
 				}
 			}
 			&.link--drt {
+				padding: 16px;
+				
 				&.active {
 					box-shadow: 0px 3px 0px $blue2;
 					color: $blue2;
@@ -54,28 +60,28 @@
 					color: $blue1;
 				}
 			}
-			&.link--menu {
-				background: url(../images/nav/tab-5-inactive.svg) no-repeat center;
-				text-indent: -10000px;
-				padding: 0;
-				width: 34px;
-				height: 34px;
+		}
+		.link--menu {
+			background: url(../images/nav/tab-5-inactive.svg) no-repeat center;
+			text-indent: -10000px;
+			padding: 0;
+			width: 34px;
+			height: 34px;
+			transition: all .22s ease-in-out;
+			border: none;
+			&:hover {
+				background-color: #fff;
+				border-radius: 3px;
+				box-shadow: 0px 5px 10px -5px #444;
 				transition: all .22s ease-in-out;
-				&:hover {
-					background-color: #fff;
-					border-radius: 3px;
-					box-shadow: 0px 5px 10px -5px #444;
-					transition: all .22s ease-in-out;
-				}
-				&:active {
-					background-color: #fff;
-					border-radius: 3px;
-					box-shadow: 0px 0px 0px 0px #444;
-					transition: all .05s ease-in-out;
-				}
-				
 			}
-			
+			&:active, &:focus {
+				background-color: #fff;
+				border-radius: 3px;
+				box-shadow: 0px 0px 0px 0px #444;
+				transition: all .05s ease-in-out;
+				outline: none;
+			}
 		}
 	}
 	.header-group {
